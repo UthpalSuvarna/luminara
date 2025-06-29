@@ -1,288 +1,140 @@
 import Link from "next/link"
-import { Phone, MessageCircle, Mail, Heart, Users, Clock, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
+import { CrisisBanner } from "@/components/crisis-banner"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { Phone, Heart, Users, BookOpen, Clock } from "lucide-react"
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b border-blue-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                <Heart className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Luminara</h1>
-                <p className="text-sm text-gray-600">Suicide Lifeline</p>
+    <div className="min-h-screen bg-white">
+      <CrisisBanner />
+      <Header />
+
+      <main>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-50 to-green-50 py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">You Are Not Alone</h1>
+            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+              Luminara provides compassionate support, crisis intervention, and resources for individuals experiencing
+              thoughts of suicide and their loved ones.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild className="bg-red-600 hover:bg-red-700 text-lg px-8 py-4">
+                <Link href="tel:0824 2983444">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call 0824 2983444
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="text-lg px-8 py-4 bg-transparent">
+                <Link href="/Contact">Contact Us Now</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Crisis Help Section */}
+        <section className="py-16 bg-red-50 border-l-4 border-red-500">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">In Crisis? Get Immediate Help</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="border-red-200">
+                  <CardContent className="p-6">
+                    <Phone className="h-12 w-12 text-red-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">Call 0824 2983444</h3>
+                    <p className="text-gray-600 mb-4">
+                      Suicide & Crisis Lifeline - Available 24/7, free and confidential
+                    </p>
+                    <Button asChild className="bg-red-600 hover:bg-red-700">
+                      <a href="tel:0824 2983444">Call Now</a>
+                    </Button>
+                  </CardContent>
+                </Card>
+                <Card className="border-red-200">
+                  <CardContent className="p-6">
+                    <Heart className="h-12 w-12 text-red-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">Email Support</h3>
+                    <p className="text-gray-600 mb-4">Reach out to our support team via email for assistance</p>
+                    <Button asChild variant="outline" className="border-red-600 text-red-600 bg-transparent">
+                      <a href="mailto:support@luminara.org">Email Now</a>
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="#resources" className="text-gray-700 hover:text-blue-600 font-medium">
-                Resources
-              </Link>
-              <Link href="#about" className="text-gray-700 hover:text-blue-600 font-medium">
-                About
-              </Link>
-              <Link href="#support" className="text-gray-700 hover:text-blue-600 font-medium">
-                Get Support
-              </Link>
-            </nav>
           </div>
-        </div>
-      </header>
+        </section>
 
-      {/* Crisis Banner */}
-      <div className="bg-red-600 text-white py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center space-x-4 text-center">
-            <Phone className="w-5 h-5" />
-            <span className="font-semibold">Crisis? Call or Text 988 • Available 24/7 • Free & Confidential</span>
+        {/* Services Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">How We Can Help</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Our comprehensive approach provides support at every stage of your journey
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Clock className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">24/7 Crisis Support</h3>
+                  <p className="text-gray-600">
+                    Immediate help when you need it most. Our trained counselors are available around the clock.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">Support Groups</h3>
+                  <p className="text-gray-600">
+                    Connect with others who understand. Join our peer support groups and community programs.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <BookOpen className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">Educational Resources</h3>
+                  <p className="text-gray-600">
+                    Learn about mental health, warning signs, and how to help yourself and others.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Hero Section */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">You Are Not Alone</h2>
-            <p className="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed">
-              If you're struggling with thoughts of suicide, experiencing emotional distress, or need someone to talk
-              to, we're here for you 24/7.
+
+        {/* CTA Section */}
+        <section className="py-16 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Take the Next Step?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Whether you need immediate help or want to learn more about our programs, we're here for you.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg">
-                <Phone className="w-5 h-5 mr-2" />
-                Call 988 Now
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" asChild>
+                <Link href="/programs">View Our Programs</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg bg-transparent"
+                asChild
+                className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Start Chat
+                <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
-      {/* Immediate Help Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Get Immediate Help</h3>
-            <p className="text-lg text-gray-600">Multiple ways to reach out when you need support</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-2 border-red-200 hover:border-red-300 transition-colors">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-red-600" />
-                </div>
-                <CardTitle className="text-red-600">Call 988</CardTitle>
-                <CardDescription>Speak with a trained counselor</CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600 mb-4">
-                  Available 24/7, free and confidential support for people in distress.
-                </p>
-                <Button className="w-full bg-red-600 hover:bg-red-700">Call Now</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-blue-200 hover:border-blue-300 transition-colors">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-8 h-8 text-blue-600" />
-                </div>
-                <CardTitle className="text-blue-600">Live Chat</CardTitle>
-                <CardDescription>Chat with a crisis counselor</CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600 mb-4">
-                  Connect through our secure chat platform when calling isn't possible.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent"
-                >
-                  Start Chat
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-purple-200 hover:border-purple-300 transition-colors">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-purple-600" />
-                </div>
-                <CardTitle className="text-purple-600">Text 988</CardTitle>
-                <CardDescription>Text with a crisis counselor</CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600 mb-4">Text-based support for those who prefer written communication.</p>
-                <Button
-                  variant="outline"
-                  className="w-full border-purple-600 text-purple-600 hover:bg-purple-50 bg-transparent"
-                >
-                  Send Text
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Luminara</h3>
-            <p className="text-lg text-gray-600">Professional, compassionate support when you need it most</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-blue-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">24/7 Availability</h4>
-              <p className="text-gray-600">Round-the-clock support whenever you need it</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Confidential</h4>
-              <p className="text-gray-600">Your privacy and safety are our top priorities</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-purple-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Trained Counselors</h4>
-              <p className="text-gray-600">Speak with qualified mental health professionals</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-red-600" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">Compassionate Care</h4>
-              <p className="text-gray-600">Non-judgmental support in your time of need</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Resources Section */}
-      <section id="resources" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Additional Resources</h3>
-            <p className="text-lg text-gray-600">Find the support that's right for you</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Crisis Text Line</CardTitle>
-                <CardDescription>Text HOME to 741741</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">24/7 crisis support via text message</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Veterans Crisis Line</CardTitle>
-                <CardDescription>Press 1 after calling 988</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">Specialized support for veterans and service members</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>LGBTQ+ Support</CardTitle>
-                <CardDescription>The Trevor Project</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">Crisis intervention for LGBTQ+ youth</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-white" />
-                </div>
-                <span className="text-xl font-bold">Luminara Suicide Lifeline</span>
-              </div>
-              <p className="text-gray-400">
-                Providing hope and support to those in crisis, 24 hours a day, 7 days a week.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Crisis Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Mental Health Information
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Support Groups
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Volunteer
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Emergency Contacts</h4>
-              <div className="space-y-2 text-gray-400">
-                <p>Crisis Line: 988</p>
-                <p>Emergency: 911</p>
-                <p>Crisis Text: Text HOME to 741741</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Luminara Suicide Lifeline. All rights reserved.</p>
-            <p className="mt-2">If you are in immediate danger, please call 911.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
