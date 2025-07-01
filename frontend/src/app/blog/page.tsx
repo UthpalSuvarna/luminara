@@ -137,9 +137,10 @@ export default function BlogPage() {
                       <span>{featuredArticle.readTime}</span>
                     </div>
                     <Button asChild>
-                      <Link href="#" className="inline-flex items-center gap-2">
-                        Read Article <ArrowRight className="h-4 w-4" />
-                      </Link>
+                      <Link href="/blog/post" className="inline-flex items-center gap-2">
+  Read Article <ArrowRight className="h-4 w-4" />
+</Link>
+
                     </Button>
                   </div>
                 </div>
