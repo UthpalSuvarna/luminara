@@ -6,9 +6,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Luminara - Suicide Prevention & Crisis Support",
+  title: "Luminara: A Mental Health & Wellness Hub",
   description:
-    "Providing hope, support, and resources for those in crisis and their loved ones. 24/7 crisis support available.",
+    "Luminara is a Suicide Lifeline Initiative, a non-profit unit ,committed to suicide prevention and mental health advocacy. It was born from years of listening to survivors, families, and those in distress, and built with care, empathy, and hope.",
   keywords: "suicide prevention, crisis support, mental health, counseling, support groups",
 }
 
