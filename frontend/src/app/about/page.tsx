@@ -3,45 +3,15 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Users, Shield, Lightbulb, Phone } from "lucide-react"
 import Link from "next/link"
 import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
 
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-blue-600">Luminara</h1>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                  Home
-                </Link>
-                <Link href="/about" className="text-blue-600 px-3 py-2 text-sm font-medium border-b-2 border-blue-600">
-                  About Us
-                </Link>
-                <Link href="/programs" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                  Programs
-                </Link>
-                <Link href="/helpline" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                  Suicide Helpline
-                </Link>
-                <Link href="/contact" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                  Contact
-                </Link>
-                <Link href="/blog" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                  Blog
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
+      {/* Crisis Banner */}
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
