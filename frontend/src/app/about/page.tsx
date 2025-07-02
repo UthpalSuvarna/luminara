@@ -4,7 +4,7 @@ import { Heart, Users, Shield, Lightbulb, Phone } from "lucide-react"
 import Link from "next/link"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
-
+import Image from "next/image"
 export default function AboutUs() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -15,8 +15,17 @@ export default function AboutUs() {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-8 font-serif">Luminara</h1>
-          <p className="text-2xl md:text-3xl text-blue-600 font-semibold mb-6 font-sans">Your Healing Space</p>
+          <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-8 ">Luminara</h1>
+          <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8 mx-auto">
+            <Image
+              src="/luminara.jpg"
+              alt="Helpline Hero"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-full"
+            />
+          </div>
+          <p className="text-2xl md:text-3xl text-blue-600 font-semibold mb-6 ">Your Healing Space</p>
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-sans">
             We believe that every life holds light—even in the darkest moments. We are a holistic mental health and
             wellness hub created by the Suicide Lifeline to support individuals navigating emotional pain, mental health
@@ -33,9 +42,9 @@ export default function AboutUs() {
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <Heart className="h-8 w-8 text-blue-500 mr-3" />
-                  <h3 className="text-2xl font-bold text-gray-900 font-sans">Mission</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 ">Mission</h3>
                 </div>
-                <p className="text-lg text-gray-700 leading-relaxed font-sans">
+                <p className="text-lg text-gray-700 leading-relaxed ">
                   At Luminara, we are committed to breaking the silence around mental health and creating a
                   compassionate, stigma-free space where individuals can access support, rediscover hope, and strengthen
                   their emotional resilience. Through professional care, inclusive outreach, and community education, we
@@ -61,9 +70,9 @@ export default function AboutUs() {
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <Shield className="h-8 w-8 text-purple-500 mr-3" />
-                  <h3 className="text-2xl font-bold text-gray-900 font-sans">Objectives</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 ">Objectives</h3>
                 </div>
-                <ul className="text-lg text-gray-700 space-y-3 font-sans">
+                <ul className="text-lg text-gray-700 space-y-3 ">
                   <li>• Build resilience and hope in the face of life's challenges</li>
                   <li>• Offer compassionate, non-judgmental care to every individual</li>
                   <li>• Provide equitable access to support, regardless of background</li>
@@ -80,7 +89,7 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8 font-serif">Who We Help</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8 ">Who We Help</h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-sans">
                 We welcome anyone seeking a safe space to talk, heal, or just be heard—whether you're in crisis,
                 recovering from trauma, supporting a loved one, or simply looking for tools to improve emotional
@@ -93,7 +102,7 @@ export default function AboutUs() {
             </div>
 
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8 font-serif">What We Offer</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8 ">What We Offer</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
@@ -124,7 +133,7 @@ export default function AboutUs() {
       {/* Our Roots */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center font-serif">Our Roots</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center ">Our Roots</h2>
           <div className="prose prose-xl max-w-none text-gray-700 font-sans">
             <p className="mb-8 text-xl leading-relaxed">
               Luminara is a Suicide Lifeline Initiative, a non-profit unit committed to suicide prevention and mental
@@ -137,7 +146,7 @@ export default function AboutUs() {
               when we decided to have a healing space as a way forward.
             </p>
             <div className="bg-blue-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">Why Luminara?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 ">Why Luminara?</h3>
               <p className="text-xl leading-relaxed">
                 The name Luminara evokes light, hope, and guidance, symbolizing our commitment to illuminating paths to
                 well-being for everyone in our community. "Your Healing Space" emphasizes the safe, supportive, and
@@ -153,7 +162,7 @@ export default function AboutUs() {
       <section className="py-16 bg-red-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 font-serif">24/7 Suicide Helpline</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">24/7 Suicide Helpline</h2>
             <div className="flex items-center justify-center mb-8">
               <Phone className="h-10 w-10 text-red-600 mr-4" />
               <span className="text-5xl font-bold text-red-600 font-mono">0824-2983444</span>
@@ -194,7 +203,7 @@ export default function AboutUs() {
       {/* Sustainability Model */}
       <section className="py-16 bg-green-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center font-serif">
+          <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center ">
             A Sustainable Path to Healing
           </h2>
           <p className="text-xl text-gray-700 text-center mb-16 max-w-4xl mx-auto font-sans leading-relaxed">
@@ -249,7 +258,7 @@ export default function AboutUs() {
       {/* Contact Section */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-10 font-serif">Need Help? We're Here for You</h2>
+          <h2 className="text-4xl font-bold mb-10 ">Need Help? We're Here for You</h2>
           <p className="text-2xl mb-10 font-sans">
             If you or someone you know needs immediate help, please reach out to our 24/7 Lifeline.
           </p>
