@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,17 +13,16 @@ export function Header() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     //{ name: "Programs", href: "/programs" },
-    { name: "Helpline", href: "/helpline" },
     { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
   ]
 
   return (
-    <header className="bg-white shadow-sm border-b">
+    <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
-            <Heart className="h-8 w-8 text-blue-600" />
+            <Image src="/luminara.jpg" width={60} height={60} alt="Luminara Logo" className="h-8 w-8 rounded-full" />
             <span className="text-xl font-bold text-gray-900">Luminara</span>
           </Link>
 
@@ -38,7 +38,7 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="bg-blue-600 hover:bg-blue-700">
-              <Link href="/lifeline">Get Help Now</Link>
+              <Link href="/helpline" className="font-extrabold">Helpline</Link>
             </Button>
           </nav>
 
@@ -62,9 +62,9 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="bg-blue-600 hover:bg-blue-700 mt-2">
-                <Link href="/lifeline" onClick={() => setIsMenuOpen(false)}>
-                  Get Help Now
+              <Button asChild className="bg-blue-600 hover:bg-blue-700 mt-2 font-extrabold">
+                <Link href="/helpline" onClick={() => setIsMenuOpen(false)}>
+                  Helpline
                 </Link>
               </Button>
             </nav>
