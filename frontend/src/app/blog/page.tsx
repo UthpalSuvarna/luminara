@@ -91,7 +91,6 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <CrisisBanner />
       <Header />
 
       <main>
@@ -138,8 +137,8 @@ export default function BlogPage() {
                     </div>
                     <Button asChild>
                       <Link href="/blog/post" className="inline-flex items-center gap-2">
-  Read Article <ArrowRight className="h-4 w-4" />
-</Link>
+                        Read Article <ArrowRight className="h-4 w-4" />
+                      </Link>
 
                     </Button>
                   </div>

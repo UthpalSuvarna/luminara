@@ -10,7 +10,6 @@ import Image from "next/image"
 export default function LifelinePage() {
   return (
     <div className="min-h-screen bg-white">
-      <CrisisBanner />
       <Header />
 
       <main>
