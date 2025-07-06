@@ -4,134 +4,245 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CrisisBanner } from "@/components/crisis-banner"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Phone, Heart, Users, BookOpen, Clock } from "lucide-react"
+import { Phone, Heart, Users, BookOpen, ArrowRight, Play, Shield, Globe, Lightbulb } from "lucide-react"
+import Image from "next/image"
 
 export default function HomePage() {
+  const blogPosts = [
+    {
+      title: "24/7 Crisis Support: How Our Helpline Saves Lives",
+      excerpt:
+        "Discover the impact of round-the-clock crisis intervention and how trained counselors provide immediate support to those in need.",
+      author: "Dr. Sarah Rodriguez",
+      date: "March 15, 2024",
+      category: "Helpline",
+      image: "/luminara.jpg?height=300&width=400",
+    },
+    {
+      title: "Training Crisis Counselors: Behind the Scenes",
+      excerpt:
+        "An inside look at the comprehensive training program that prepares our volunteers to handle crisis calls with compassion and expertise.",
+      author: "Michael Johnson",
+      date: "March 10, 2024",
+      category: "Training",
+      image: "/luminara.jpg?height=300&width=400",
+    },
+    {
+      title: "The Evolution of Crisis Support: From Calls to Digital",
+      excerpt:
+        "How modern technology is transforming crisis intervention, from traditional phone calls to text support and online chat platforms.",
+      author: "Lisa Chen",
+      date: "March 5, 2024",
+      category: "Innovation",
+      image: "/luminara.jpg?height=300&width=400",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
-      <CrisisBanner />
       <Header />
 
       <main>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-green-50 py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">You Are Not Alone</h1>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              Luminara provides compassionate support, crisis intervention, and resources for individuals experiencing
-              thoughts of suicide and their loved ones.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-red-600 hover:bg-red-700 text-lg px-8 py-4">
-                <Link href="tel:0824 2983444">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call 0824 2983444
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg px-8 py-4 bg-transparent">
-                <Link href="/Contact">Contact Us Now</Link>
-              </Button>
+        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b to-blue-300 via-blue-100 from-white text-white overflow-hidden">
+
+
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <div className="max-w-5xl mx-auto">
+              <div className="mb-8">
+                <div className="relative w-64 h-64 mx-auto mb-6 mt-10">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-xl opacity-60"></div>
+                  <div className="relative w-64 h-64 bg-white rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <Image
+                      src="/luminara.jpg"
+                      alt="Helpline Hero"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-full"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Main Heading */}
+              <h1 className="text-3xl md:text-7xl font-bold mb-6 leading-tight text-gray-900">
+                Luminara
+                <br />
+                <span className="text-xl md:text-5xl">
+                  A Mental Health & Wellness Hub
+                </span>
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-black text-sm md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                Luminara is a non-profit organization dedicated to mental health advocacy, crisis intervention, and
+                community support. Togethdher, we create a world where no one faces their darkest moments alone.
+              </p>
+
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4 shadow-lg" asChild>
+                  <Link href="/helpline">
+                    Helpline
+                  </Link>
+                </Button>
+                <Button size="lg" className="bg-blue-600 hover:bg-blueh-700 text-lg px-8 py-4 shadow-lg" asChild>
+                  <Link href="/about">
+                    Contact Us
+                  </Link>
+                </Button>
+              </div>
+
             </div>
           </div>
+
         </section>
 
-        {/* Crisis Help Section */}
-        <section className="py-16 bg-red-50 border-l-4 border-red-500">
+        {/* About Us Section */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">In Crisis? Get Immediate Help</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <Card className="border-red-200">
-                  <CardContent className="p-6">
-                    <Phone className="h-12 w-12 text-red-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">Call 0824 2983444</h3>
-                    <p className="text-gray-600 mb-4">
-                      Suicide & Crisis Lifeline - Available 24/7, free and confidential
-                    </p>
-                    <Button asChild className="bg-red-600 hover:bg-red-700">
-                      <a href="tel:0824 2983444">Call Now</a>
-                    </Button>
-                  </CardContent>
-                </Card>
-                <Card className="border-red-200">
-                  <CardContent className="p-6">
-                    <Heart className="h-12 w-12 text-red-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">Email Support</h3>
-                    <p className="text-gray-600 mb-4">Reach out to our support team via email for assistance</p>
-                    <Button asChild variant="outline" className="border-red-600 text-red-600 bg-transparent">
-                      <a href="mailto:support@luminara.org">Email Now</a>
-                    </Button>
-                  </CardContent>
-                </Card>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="mb-6">
+                    <span className="text-blue-600 font-semibold text-lg">About Luminara</span>
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">
+                      Mental Health
+                      <span className="text-blue-600"> Wellness Hub</span>
+                    </h2>
+                  </div>
+
+                  <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                    At Luminara, we are committed to breaking the silence around mental health and creating a compassionate, stigma-free space where individuals can access support, rediscover hope, and strengthen their emotional resilience. Through professional care, inclusive outreach, and community education, we empower every person to take meaningful steps toward healing and lasting wellness
+                  </p>
+
+                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Luminara offers free counseling, group support sessions, mindfulness workshops, and self-care resources. Our trained mental health volunteers and professionals are here to guide, listen, and walk beside you—without judgment.
+                  </p>
+
+                  {/* Key Services */}
+
+                  <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
+                    <Link href="/about" className="inline-flex items-center gap-2">
+                      Know More About Us
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
+                  </Button>
+                </div>
+
+                <div className="relative">
+                  {/* Main Image */}
+                  <div className="relative z-10">
+                    <Image
+                      src="/luminara.jpg?height=500&width=600"
+                      alt="Luminara team supporting community"
+                      height={500}
+                      width={500}
+                      className="rounded-full shadow-2xl w-full md:m-5"
+                    />
+                  </div>
+
+                  {/* Floating Cards */}
+                  {/* <div className="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg z-20">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                        <Heart className="h-6 w-6 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">10,000+</div>
+                        <div className="text-sm text-gray-600">Lives Impacted</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg z-20">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <Globe className="h-6 w-6 text-blue-600" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-gray-900">24/7</div>
+                        <div className="text-sm text-gray-600">Always Available</div>
+                      </div>
+                    </div>
+                  </div> */}
+
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-16">
+        <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">How We Can Help</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our comprehensive approach provides support at every stage of your journey
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <Clock className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">24/7 Crisis Support</h3>
-                  <p className="text-gray-600">
-                    Immediate help when you need it most. Our trained counselors are available around the clock.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Support Groups</h3>
-                  <p className="text-gray-600">
-                    Connect with others who understand. Join our peer support groups and community programs.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
-                  <BookOpen className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Educational Resources</h3>
-                  <p className="text-gray-600">
-                    Learn about mental health, warning signs, and how to help yourself and others.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="max-w-6xl mx-auto">
+              {/* Section Header */}
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Blogs & Articles
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Discover the impact of our crisis support services through expert insights, real stories, and the
+                  latest developments in mental health crisis intervention.
+                </p>
+              </div>
+
+              {/* Blog Posts Grid */}
+              <div className="grid lg:grid-cols-3 gap-8 mb-12">
+                {blogPosts.map((post, index) => (
+                  <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={post.image || "/placeholder.svg"}
+                        alt={post.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                          {post.category}
+                        </span>
+                      </div>
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                        <span>{post.date}</span>
+                      </div>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all bg-transparent"
+                      >
+                        Read More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* View All Blogs Button */}
+              <div className="text-center">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  asChild
+                  className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-transparent"
+                >
+                  <Link href="/blog" className="inline-flex items-center gap-2">
+                    View All Helpline Articles
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
 
-        {/* CTA Section */}
-        <section className="py-16 bg-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Take the Next Step?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Whether you need immediate help or want to learn more about our programs, we're here for you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link href="/programs">View Our Programs</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
-              >
-                <Link href="/contact">Contact Us</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+
       </main>
 
       <Footer />
