@@ -106,7 +106,7 @@ export default function AboutUs() {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-lg text-gray-700 font-sans">Free counseling sessions</span>
+                  <span className="text-lg text-gray-700 font-sans">Pocket friendly counseling </span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
@@ -114,7 +114,7 @@ export default function AboutUs() {
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-lg text-gray-700 font-sans">Mindfulness workshops</span>
+                  <span className="text-lg text-gray-700 font-sans">Mental Wellness workshops</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
@@ -122,7 +122,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <p className="text-lg text-gray-600 mt-6 italic font-sans">
-                Our trained mental health volunteers and professionals are here to guide, listen, and walk beside
+                Our trained mental health professionals are here to guide, listen, and walk beside
                 you—without judgment.
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function AboutUs() {
               <Phone className="h-10 w-10 text-red-600 mr-4" />
               <span className="text-5xl font-bold text-red-600 font-mono">0824-2983444</span>
             </div>
-            <p className="text-2xl text-gray-700 mb-8 font-sans">You are not alone. We are here to listen.</p>
+            <p className="text-2xl text-gray-700 mb-8 font-sans">You are not alone. We are here to help.</p>
           </div>
 
           <div className="bg-white p-10 rounded-lg shadow-sm">
@@ -189,7 +189,7 @@ export default function AboutUs() {
               <div>
                 <h4 className="font-bold text-gray-900 mb-4 text-xl font-sans">Our Impact</h4>
                 <ul className="text-lg text-gray-700 space-y-2 font-sans">
-                  <li>• 3,075+ callers assisted to date</li>
+                  <li>• 3,132+ callers assisted to date</li>
                   <li>• Regular awareness programs</li>
                   <li>• Gatekeeper training in institutions</li>
                   <li>• Annual suicide prevention activities</li>
