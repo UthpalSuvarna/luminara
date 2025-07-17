@@ -14,31 +14,42 @@ export default function LifelinePage() {
 
       <main>
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="py-20 bg-cover bg-left mb-5" style={{ backgroundImage: "url('/bg2.jpg')" }}>
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Sucide Helpline</h1>
-              <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8 mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto gap-8">
+
+              {/* Image Left */}
+              <div className="relative w-32 h-32 md:w-48 md:h-48 flex-shrink-0">
                 <Image
                   src="/suicide-helpline.jpg"
                   alt="Helpline Hero"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-lg"
+                  className="rounded-full"
                 />
               </div>
-              {/* <p className="text-xl text-gray-700 mb-8">
-                If you're having thoughts of suicide or are in emotional distress, you're not alone. Help is available
-                right now.
-              </p> */}
-              <Alert className="border-blue-200 bg-blue-50 max-w-2xl mx-auto">
-                <AlertDescription className="text-blue-800 text-center flex justify-center items-center">
-                  <strong>0824-2983444 - A 24X7 Suicide Prevention Helpline of Mangalore</strong>
-                </AlertDescription>
-              </Alert>
+
+              {/* Text Right */}
+              <div className="text-center md:pl-72 md:text-left">
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Suicide Helpline</h1>
+                <p className="text-xl md:text-2xl font-bold text-gray-900 mb-6">We are here to listen</p>
+                <p className="text-2xl text-gray-700 font-medium mb-6">
+                  Lifeline offers free, confidential, and non-judgmental support. Available 24/7.
+                </p>
+                <div>
+                  <p className="text-xl font-bold text-gray-900">
+                    Call: <br /> <span className="text-5xl">0824-2983444</span>
+                  </p>
+                  <p className="text-lg text-gray-700 mt-2">
+                    Email: <a href="mailto:lifelineconnect25@gmail.com" className="text-blue-600 underline">lifelineconnect25@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
+
 
         <section className="py-10">
           <div className="container mx-auto px-4">
