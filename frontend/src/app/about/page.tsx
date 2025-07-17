@@ -13,7 +13,7 @@ export default function AboutUs() {
 
       {/* Crisis Banner */}
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-8 ">Luminara</h1>
           <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8 mx-auto">
@@ -32,13 +32,24 @@ export default function AboutUs() {
             struggles, or moments of crisis.
           </p>
         </div>
+      </section> */}
+
+      <section className="bg-gradient-to-br from-blue-50 to-green-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Us</h1>
+            <p className="text-xl text-gray-700">
+              Need help? We are here to listen.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Mission, Vision, Objectives */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-l-4 border-l-blue-500">
+            <Card className="rounded-none">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <Heart className="h-8 w-8 text-blue-500 mr-3" />
@@ -53,7 +64,7 @@ export default function AboutUs() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-green-500">
+            <Card className="rounded-none">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <Lightbulb className="h-8 w-8 text-green-500 mr-3" />
@@ -66,7 +77,7 @@ export default function AboutUs() {
               </CardContent>
             </Card>
 
-            <Card className="border-l-4 border-l-purple-500">
+            <Card className="rounded-none">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <Shield className="h-8 w-8 text-purple-500 mr-3" />
@@ -145,7 +156,7 @@ export default function AboutUs() {
               issues. Additionally, the community expressed that the Lifeline should have more visibility and that's
               when we decided to have a healing space as a way forward.
             </p>
-            <div className="bg-blue-50 p-8 rounded-lg">
+            <div className="bg-blue-50 p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 ">Why Luminara?</h3>
               <p className="text-xl leading-relaxed">
                 The name Luminara evokes light, hope, and guidance, symbolizing our commitment to illuminating paths to
@@ -170,7 +181,7 @@ export default function AboutUs() {
             <p className="text-2xl text-gray-700 mb-8 font-sans">You are not alone. We are here to help.</p>
           </div>
 
-          <div className="bg-white p-10 rounded-lg shadow-sm">
+          <div className="bg-white p-10 rounded-none shadow-sm">
             <p className="text-lg text-gray-700 mb-6 font-sans leading-relaxed">
               Suicide Lifeline was officially launched on October 2nd, 2017 under the aegis of Susheg Charitable Trust
               with support from educational institutions like St. Agnes College, Roshni Nilaya, St. Aloysius College and
@@ -212,7 +223,7 @@ export default function AboutUs() {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-white">
+            <Card className="bg-white rounded-none">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-6 w-6 text-green-600" />
@@ -222,7 +233,7 @@ export default function AboutUs() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white">
+            <Card className="bg-white rounded-none">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Heart className="h-6 w-6 text-blue-600" />
@@ -232,7 +243,7 @@ export default function AboutUs() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white">
+            <Card className="bg-white rounded-none">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-6 w-6 text-purple-600" />
@@ -242,7 +253,7 @@ export default function AboutUs() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white">
+            <Card className="bg-white rounded-none">
               <CardContent className="p-6 text-center">
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="h-6 w-6 text-yellow-600" />
@@ -271,13 +282,13 @@ export default function AboutUs() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 rounded-none">
               <Link href="/contact">Contact Us</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent"
+              className="border-white text-white hover:bg-white hover:text-gray-900 bg-transparent rounded-none"
             >
               <Link href="/helpline">Learn More About Our Helpline</Link>
             </Button>
