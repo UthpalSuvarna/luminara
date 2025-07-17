@@ -60,11 +60,11 @@ export function Footer() {
             <div className="mb-4">
               <p className="text-base text-gray-300 mb-2 font-sans">24/7 Suicide Prevention Helpline</p>
             </div>
-            <div className="bg-red-900/20 p-4 rounded-lg border border-red-800">
+            <div className="bg-red-900/20 p-4 rounded-none border border-red-800">
               <p className="text-sm text-red-200 font-sans">
                 <a
                   href="tel:08242983444"
-                  className="text-2xl text-white font-bold bg-red-600 px-4 py-2 rounded-lg font-mono mb-4 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition duration-200 inline-block text-center"
+                  className="text-2xl text-white font-bold bg-red-600 px-4 py-2 rounded-none font-mono mb-4 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition duration-200 inline-block text-center"
                 >
                   0824-2983444
                 </a>
