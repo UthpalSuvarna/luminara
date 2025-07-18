@@ -37,8 +37,8 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="bg-blue-600 hover:bg-blue-700 rounded-none">
-              <Link href="/helpline" className="font-extrabold">Helpline</Link>
+            <Button asChild className="bg-blue-600 font-extrabold hover:bg-blue-700 rounded-none">
+              <Link href="/helpline" className="font-extrabold">Suicide Lifeline</Link>
             </Button>
           </nav>
 
@@ -51,12 +51,12 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-4 ">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium py-2"
+                  className="text-gray-700 hover:text-blue-600 font-medium py-2 w-full text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -64,7 +64,7 @@ export function Header() {
               ))}
               <Button asChild className="bg-blue-600 hover:bg-blue-700 mt-2 font-extrabold rounded-none">
                 <Link href="/helpline" onClick={() => setIsMenuOpen(false)}>
-                  Helpline
+                  Suicide Lifeline
                 </Link>
               </Button>
             </nav>
