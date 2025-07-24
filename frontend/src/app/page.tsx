@@ -43,60 +43,143 @@ export default function HomePage() {
       <Header />
 
       <main>
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b to-blue-300 via-blue-100 from-white text-white overflow-hidden">
+        <section className="relative bg-gray-50">
+          {/* Simple Background Pattern */}
 
+          {/* Content */}
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center py-10">
+                {/* Left Content */}
+                <div className="text-gray-900 space-y-8">
+                  {/* Badge */}
+                  <div className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span className="text-sm font-medium text-blue-800"> 5+ Years of Impact</span>
+                  </div>
 
-          <div className="container mx-auto px-4 text-center relative z-10">
-            <div className="max-w-5xl mx-auto">
-              <div className="mb-8">
-                <div className="relative w-64 h-64 mx-auto mb-6 mt-10">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-xl opacity-60"></div>
-                  <div className="relative w-64 h-64 bg-white rounded-full flex items-center justify-center backdrop-blur-sm">
-                    <Image
-                      src="/luminara.jpg"
-                      alt="Helpline Hero"
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-full"
-                    />
+                  {/* Main Heading */}
+                  <div className="space-y-4">
+                    <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
+                      Luminara
+                    </h1>
+                    <p className="text-3xl lg:text-4xl">A Mental Health & Wellness Hub</p>
+                  </div>
+
+                  {/* Subtitle */}
+                  <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
+                    Luminara is a non-profit organization dedicated to mental health advocacy, crisis intervention, and
+                    community support. Together, we create a world where no one faces their darkest moments alone.
+                  </p>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4" asChild>
+                      <Link href="tel:08242983444">
+                        <Phone className="mr-2 h-5 w-5" />
+                        Call 08242983444
+                      </Link>
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="text-lg px-8 py-4 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-transparent"
+                      asChild
+                    >
+                      <Link href="/about">
+                        About Us
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+
+                  {/* Stats
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold mb-1">15+</div>
+                      <div className="text-gray-500 text-sm">Years of Service</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold mb-1">10K+</div>
+                      <div className="text-gray-500 text-sm">Lives Touched</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold mb-1">24/7</div>
+                      <div className="text-gray-500 text-sm">Crisis Support</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold mb-1">50+</div>
+                      <div className="text-gray-500 text-sm">Trained Volunteers</div>
+                    </div>
+                  </div> */}
+                </div>
+
+                {/* Right Image Collage */}
+                <div className="relative lg:h-[600px] flex items-center justify-center">
+                  <div className="relative w-full max-w-lg mx-5">
+                    {/* Main Large Image */}
+                    <div className="relative z-10">
+                      <img
+                        src="/img2.jpg?height=400&width=350"
+                        alt="Support group meeting"
+                        className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+                      />
+                    </div>
+
+                    {/* Top Right Image */}
+                    <div className="absolute -top-6 -right-6 z-20">
+                      <img
+                        src="/img3.jpg?height=150&width=200"
+                        alt="Crisis counselor"
+                        className="w-48 h-32 object-cover rounded-xl shadow-lg"
+                      />
+                    </div>
+
+                    {/* Bottom Left Image */}
+                    <div className="absolute -bottom-6 -left-6 z-20">
+                      <img
+                        src="/img4.jpg?height=150&width=200"
+                        alt="Community workshop"
+                        className="w-48 h-32 object-cover rounded-xl shadow-lg"
+                      />
+                    </div>
+
+                    {/* Floating Info Cards */}
+                    <div className="absolute top-4 left-4 bg-white rounded-lg p-3 shadow-lg z-30">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                          <Phone className="h-4 w-4 text-red-600" />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-gray-900 text-sm">24/7 Helpline</div>
+                          <div className="text-xs text-gray-600">Always Available</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="absolute bottom-4 right-4 bg-white rounded-lg p-3 shadow-lg z-30">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                          <Heart className="h-4 w-4 text-green-600" />
+                        </div>
+                        <div>
+                          <div className="font-semibold text-gray-900 text-sm">3132+</div>
+                          <div className="text-xs text-gray-600">Callers</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Background Decoration */}
+                    <div className="absolute -top-8 -right-8 w-72 h-72 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl opacity-20 -z-10"></div>
+                    <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl opacity-20 -z-10"></div>
                   </div>
                 </div>
               </div>
-
-              {/* Main Heading */}
-              <h1 className="text-3xl md:text-7xl font-bold mb-6 leading-tight text-gray-900">
-                Luminara
-                <br />
-                <span className="text-xl md:text-5xl">
-                  A Mental Health & Wellness Hub
-                </span>
-              </h1>
-
-              {/* Subtitle */}
-              <p className="text-black text-sm md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                Luminara is a non-profit organization dedicated to mental health advocacy, crisis intervention, and
-                community support. Togethdher, we create a world where no one faces their darkest moments alone.
-              </p>
-
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4 shadow-lg" asChild>
-                  <Link href="/helpline">
-                    Helpline
-                  </Link>
-                </Button>
-                <Button size="lg" className="bg-blue-600 hover:bg-blueh-700 text-lg px-8 py-4 shadow-lg" asChild>
-                  <Link href="/about">
-                    Contact Us
-                  </Link>
-                </Button>
-              </div>
-
             </div>
           </div>
 
+          {/* Scroll Indicator */}
         </section>
-
         {/* About Us Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -111,11 +194,11 @@ export default function HomePage() {
                     </h2>
                   </div>
 
-                  <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                     At Luminara, we are committed to breaking the silence around mental health and creating a compassionate, stigma-free space where individuals can access support, rediscover hope, and strengthen their emotional resilience. Through professional care, inclusive outreach, and community education, we empower every person to take meaningful steps toward healing and lasting wellness
                   </p>
 
-                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                     Luminara offers free counseling, group support sessions, mindfulness workshops, and self-care resources. Our trained mental health volunteers and professionals are here to guide, listen, and walk beside you—without judgment.
                   </p>
 
@@ -133,23 +216,23 @@ export default function HomePage() {
                   {/* Main Image */}
                   <div className="relative z-10">
                     <Image
-                      src="/luminara.jpg?height=500&width=600"
+                      src="/img1.jpg?height=500&width=600"
                       alt="Luminara team supporting community"
                       height={500}
                       width={500}
-                      className="rounded-full shadow-2xl w-full md:m-5"
+                      className="rounded-lg shadow-2xl w-full md:m-5"
                     />
                   </div>
 
                   {/* Floating Cards */}
-                  {/* <div className="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg z-20">
+                  <div className="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg z-20">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                         <Heart className="h-6 w-6 text-green-600" />
                       </div>
                       <div>
-                        <div className="font-bold text-gray-900">10,000+</div>
-                        <div className="text-sm text-gray-600">Lives Impacted</div>
+                        <div className="font-bold text-gray-900">3132+</div>
+                        <div className="text-sm text-gray-600">Callers</div>
                       </div>
                     </div>
                   </div>
@@ -164,7 +247,7 @@ export default function HomePage() {
                         <div className="text-sm text-gray-600">Always Available</div>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
 
                 </div>
               </div>
