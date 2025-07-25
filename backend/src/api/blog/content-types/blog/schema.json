@@ -14,8 +14,25 @@
     "Title": {
       "type": "string"
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "required": true
+    },
+    "Banner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "Content": {
-      "type": "richtext"
+      "type": "blocks",
+      "required": true
+    },
+    "Author": {
+      "type": "string"
     }
   }
 }
