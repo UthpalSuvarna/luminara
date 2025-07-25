@@ -1,4 +1,4 @@
-async function fetchBlog(slug: String) {
+async function fetchBlog(slug: string) {
     const reqOptions = {
         headers: {
             Authorization: `Bearer ${process.env.BACKEND_API_TOKEN}`
