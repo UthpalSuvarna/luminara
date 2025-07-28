@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-
+import ContentRenderer from "./ContentRenderer";
 
 export default async function Blog({
     params,
@@ -13,8 +13,8 @@ export default async function Blog({
 }) {
     const { slug } = await params;
     const blog = await fetchBlog(slug);
-    console.log(blog.data[0].Banner.url)
     const content = blog.data[0].Content;
+    console.log(content)
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
@@ -55,7 +55,7 @@ export default async function Blog({
                         </div>
 
                         <div className="prose prose-lg max-w-none">
-                            <p>The content goes here</p>
+                            <ContentRenderer content={content} />
                         </div>
 
 
