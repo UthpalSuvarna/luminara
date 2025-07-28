@@ -11,6 +11,7 @@ import fetchBlogs from "@/helpers/getBlogs"
 
 export default async function BlogPage() {
   const blogs = await fetchBlogs();
+  console.log(blogs.data[0].Banner.url)
 
   return (
     <div className="min-h-screen bg-white">
@@ -79,11 +80,11 @@ export default async function BlogPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Recent Articles</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blogs.data.map((blog: any) => (
+                {blogs.data && blogs.data.map((blog: any) => (
                   <Card key={1} className="rounded-none pt-0 overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="w-full aspect-[16/9]">
                       <img
-                        src={blog.image || "/img2.jpg"}
+                        src={`${process.env.BACKEND_API_ENDPOINT}${blog.Banner?.url}`}
                         alt={blog.Title}
                         className="w-full h-full object-cover"
                       />
