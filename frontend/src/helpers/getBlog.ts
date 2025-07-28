@@ -2,6 +2,9 @@ async function fetchBlog(slug: string) {
     const reqOptions = {
         headers: {
             Authorization: `Bearer ${process.env.BACKEND_API_TOKEN}`
+        },
+        next: {
+            revalidate: 3600 // everyhour
         }
     };
 
