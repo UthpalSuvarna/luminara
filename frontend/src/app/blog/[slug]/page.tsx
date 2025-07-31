@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import ContentRenderer from "./ContentRenderer";
+import NotFound from "./not-found";
 
 export default async function Blog({
     params,
@@ -12,9 +13,18 @@ export default async function Blog({
     params: Promise<{ slug: string }>;
 }) {
     const { slug } = await params;
-    const blog = await fetchBlog(slug);
-    const content = blog.data[0].Content;
-    console.log(content)
+    let blog;
+    try {
+        blog = await fetchBlog(slug);
+    } catch (error) {
+        return <NotFound />;
+    }
+
+    if (blog.data.length == 0) {
+        return <NotFound />
+    }
+
+    const content = blog?.data[0]?.Content;
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
