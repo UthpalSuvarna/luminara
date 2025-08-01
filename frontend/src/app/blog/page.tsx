@@ -11,7 +11,7 @@ import fetchBlogs from "@/helpers/getBlogs"
 
 export default async function BlogPage() {
   const blogs = await fetchBlogs();
-  console.log(blogs.data[0].Banner.url)
+  console.log(blogs.data[0].Banner)
 
   return (
     <div className="min-h-screen bg-white">
@@ -84,7 +84,7 @@ export default async function BlogPage() {
                   <Card key={1} className="rounded-none pt-0 overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="w-full aspect-[16/9]">
                       <img
-                        src={`${process.env.BACKEND_API_ENDPOINT}${blog.Banner?.url}`}
+                        src={`${blog.Banner?.url}`}
                         alt={blog.Title}
                         className="w-full h-full object-cover"
                       />

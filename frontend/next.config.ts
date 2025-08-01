@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
       {
         hostname: imageHost || '',
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
     ],
   }
 };
