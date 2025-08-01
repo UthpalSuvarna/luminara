@@ -40,7 +40,7 @@ export default async function Blog({
                 <article className="bg-white rounded-none shadow-sm overflow-hidden">
                     <div className="relative w-full aspect-[16/9]">
                         <Image
-                            src={`${process.env.BACKEND_API_ENDPOINT}${blog.data[0].Banner?.url}`}
+                            src={`${blog.data[0].Banner?.url}`}
                             alt="Blog post hero image"
                             fill
                             className="object-cover"
