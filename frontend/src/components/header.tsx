@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <header className="bg-white shadow-sm">
-      <div className="container mx-auto px-4">
+      <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/luminara.jpg" width={60} height={60} alt="Luminara Logo" className="h-8 w-8 rounded-full" />

@@ -3,8 +3,8 @@ import Link from "next/link"
 export function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+      <div className="container mx-auto max-w-7xl px-4">
+        <div className="grid lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-6 ">Luminara</h3>
             <p className="text-gray-300 text-lg leading-relaxed font-sans">
@@ -13,8 +13,9 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-6 text-lg font-sans">Quick Links</h4>
+
+          <div className="lg:ml-20">
+            <h4 className="font-bold mb-3 text-lg font-sans">Quick Links</h4>
             <ul className="space-y-3 text-base font-sans">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-white transition-colors duration-200">
@@ -26,11 +27,11 @@ export function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link href="/programs" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  Programs
-                </Link>
-              </li>
+              {/* <li>
+                  <Link href="/programs" className="text-gray-300 hover:text-white transition-colors duration-200">
+                    Programs
+                  </Link>
+                </li> */}
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200">
                   Contact
@@ -39,8 +40,8 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-6 text-lg font-sans">Support & Resources</h4>
+          <div className="">
+            <h4 className="font-bold mb-3 text-lg font-sans">Support</h4>
             <ul className="space-y-3 text-base font-sans">
               <li>
                 <Link href="/helpline" className="text-gray-300 hover:text-white transition-colors duration-200">
@@ -56,7 +57,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-lg text-red-400 font-sans">Emergency Support</h4>
+            <h4 className="font-bold mb-3 text-lg text-red-400 font-sans">Emergency Support</h4>
             <div className="mb-4">
               <p className="text-base text-gray-300 mb-2 font-sans">24/7 Suicide Prevention Helpline</p>
             </div>
@@ -64,7 +65,7 @@ export function Footer() {
               <p className="text-sm text-red-200 font-sans">
                 <a
                   href="tel:08242983444"
-                  className="text-2xl text-white font-bold bg-red-600 px-4 py-2 rounded-none font-mono mb-4 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition duration-200 inline-block text-center"
+                  className="text-xl sm:text-xl lg:text-xl text-white font-bold bg-red-600 px-4 py-2 rounded-none font-mono mb-4 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition duration-200 inline-block text-center"
                 >
                   0824-2983444
                 </a>
@@ -80,7 +81,7 @@ export function Footer() {
           <div className="flex flex-col  justify-between items-center">
             <div className="mb-2 md:mb-0">
               <p className="text-gray-300 text-base font-sans text-center md:text-left">
-                Luminara- A Suicide Lifeline Initiative
+                Luminara - Suicide Lifeline Initiative
               </p>
             </div>
           </div>

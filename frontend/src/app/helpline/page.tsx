@@ -15,7 +15,7 @@ export default function LifelinePage() {
       <main>
         {/* Hero Section */}
         <section className="bg-white py-10 md:py-16 relative overflow-hidden">
-          <div className="container mx-auto px-4 relative">
+          <div className="container max-w-7xl mx-auto relative px-4">
             <div className="relative rounded-none overflow-hidden shadow-lg max-h-[600px]">
               <img
                 src="/bg2.jpg"
@@ -55,7 +55,7 @@ export default function LifelinePage() {
 
 
         <section className="py-10">
-          <div className="container mx-auto px-4">
+          <div className="container max-w-7xl mx-auto px-4">
             <div className="text-justify mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">About Suicide Lifeline</h2>
               <div className="w-64 h-64 relative mx-auto mb-8">

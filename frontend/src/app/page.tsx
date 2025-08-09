@@ -13,8 +13,8 @@ export default function HomePage() {
       <main>
         <section className="relative bg-gray-50">
           {/* Simple Background Pattern */}
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-7xl mx-auto">
+          <div className="container mx-auto  relative z-10">
+            <div className="max-w-7xl mx-auto px-4">
               <div className="grid lg:grid-cols-2 gap-12 items-center py-10">
                 {/* Left Content */}
                 <div className="text-gray-900 space-y-8">
@@ -127,13 +127,13 @@ export default function HomePage() {
 
         {/* About Us Section */}
         <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+          <div className="container mx-auto">
+            <div className="max-w-7xl mx-auto px-4">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="mb-6">
                     <span className="text-blue-600 font-semibold text-lg">About Luminara</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">
+                    <h2 className="text-4xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
                       Mental Health
                       <span className="text-blue-600"> Wellness Hub</span>
                     </h2>
@@ -201,8 +201,8 @@ export default function HomePage() {
         </section>
 
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+          <div className="container mx-auto ">
+            <div className="max-w-7xl px-4 mx-auto">
               {/* Section Header */}
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

@@ -63,12 +63,12 @@ export default function ContactPage() {
 
         {/* Contact Information */}
         <section className="py-16">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto max-w-7xl px-4">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                <Card>
+                <Card className="rounded-none">
                   <CardContent className="p-6">
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-4">
@@ -80,7 +80,7 @@ export default function ContactPage() {
                             value={formData.name}
                             onChange={(e) => handleChange("name", e.target.value)}
                             required
-                            className="mt-1"
+                            className="mt-1 rounded-none"
                           />
                         </div>
                         <div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
                             value={formData.email}
                             onChange={(e) => handleChange("email", e.target.value)}
                             required
-                            className="mt-1"
+                            className="mt-1 rounded-none"
                           />
                         </div>
                       </div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                             type="tel"
                             value={formData.phone}
                             onChange={(e) => handleChange("phone", e.target.value)}
-                            className="mt-1"
+                            className="mt-1 rounded-none"
                           />
                         </div>
                         <div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                           value={formData.subject}
                           onChange={(e) => handleChange("subject", e.target.value)}
                           required
-                          className="mt-1"
+                          className="mt-1 rounded-none"
                         />
                       </div>
 
@@ -148,12 +148,12 @@ export default function ContactPage() {
                           onChange={(e) => handleChange("message", e.target.value)}
                           required
                           rows={5}
-                          className="mt-1"
+                          className="mt-1 rounded-none"
                           placeholder="Please share your message or questions..."
                         />
                       </div>
 
-                      <Button type="submit" className="bg-blue-600 hover:bg-blue-700 w-full">
+                      <Button type="submit" className="bg-blue-600 hover:bg-blue-700 w-full rounded-none">
                         Send Message
                       </Button>
                     </form>
@@ -165,7 +165,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <div className="space-y-6">
-                  <Card className="border-red-200">
+                  <Card className="border-red-200 rounded-none">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-4">
                         <Heart className="h-6 w-6 text-red-600" />
