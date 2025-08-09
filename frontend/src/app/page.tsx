@@ -1,58 +1,23 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { CrisisBanner } from "@/components/crisis-banner"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Phone, Heart, Users, BookOpen, ArrowRight, Play, Shield, Globe, Lightbulb } from "lucide-react"
+import { Phone, Heart, ArrowRight, Globe } from "lucide-react"
 import Image from "next/image"
+import { RecentBlogs } from "@/components/recentBlogs"
 
 export default function HomePage() {
-  const blogPosts = [
-    {
-      title: "24/7 Crisis Support: How Our Helpline Saves Lives",
-      excerpt:
-        "Discover the impact of round-the-clock crisis intervention and how trained counselors provide immediate support to those in need.",
-      author: "Dr. Sarah Rodriguez",
-      date: "March 15, 2024",
-      category: "Helpline",
-      image: "/luminara.jpg?height=300&width=400",
-    },
-    {
-      title: "Training Crisis Counselors: Behind the Scenes",
-      excerpt:
-        "An inside look at the comprehensive training program that prepares our volunteers to handle crisis calls with compassion and expertise.",
-      author: "Michael Johnson",
-      date: "March 10, 2024",
-      category: "Training",
-      image: "/luminara.jpg?height=300&width=400",
-    },
-    {
-      title: "The Evolution of Crisis Support: From Calls to Digital",
-      excerpt:
-        "How modern technology is transforming crisis intervention, from traditional phone calls to text support and online chat platforms.",
-      author: "Lisa Chen",
-      date: "March 5, 2024",
-      category: "Innovation",
-      image: "/luminara.jpg?height=300&width=400",
-    },
-  ]
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
       <main>
         <section className="relative bg-gray-50">
           {/* Simple Background Pattern */}
-
-          {/* Content */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center py-10">
                 {/* Left Content */}
                 <div className="text-gray-900 space-y-8">
-                  {/* Badge */}
                   <div className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                     <span className="text-sm font-medium text-blue-800"> 5+ Years of Impact</span>
@@ -74,7 +39,7 @@ export default function HomePage() {
 
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4" asChild>
+                    <Button size="lg" className=" rounded-none bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4" asChild>
                       <Link href="tel:08242983444">
                         <Phone className="mr-2 h-5 w-5" />
                         Call 08242983444
@@ -83,7 +48,7 @@ export default function HomePage() {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="text-lg px-8 py-4 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-transparent"
+                      className="rounded-none text-lg px-8 py-4 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-transparent"
                       asChild
                     >
                       <Link href="/about">
@@ -93,25 +58,6 @@ export default function HomePage() {
                     </Button>
                   </div>
 
-                  {/* Stats
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-4">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold mb-1">15+</div>
-                      <div className="text-gray-500 text-sm">Years of Service</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold mb-1">10K+</div>
-                      <div className="text-gray-500 text-sm">Lives Touched</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold mb-1">24/7</div>
-                      <div className="text-gray-500 text-sm">Crisis Support</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold mb-1">50+</div>
-                      <div className="text-gray-500 text-sm">Trained Volunteers</div>
-                    </div>
-                  </div> */}
                 </div>
 
                 {/* Right Image Collage */}
@@ -122,7 +68,7 @@ export default function HomePage() {
                       <img
                         src="/img2.jpg?height=400&width=350"
                         alt="Support group meeting"
-                        className="w-full h-80 object-cover rounded-2xl shadow-2xl"
+                        className="w-full h-80 object-cover shadow-2xl"
                       />
                     </div>
 
@@ -131,7 +77,7 @@ export default function HomePage() {
                       <img
                         src="/img3.jpg?height=150&width=200"
                         alt="Crisis counselor"
-                        className="w-48 h-32 object-cover rounded-xl shadow-lg"
+                        className="w-48 h-32 object-cover shadow-lg"
                       />
                     </div>
 
@@ -140,12 +86,12 @@ export default function HomePage() {
                       <img
                         src="/img4.jpg?height=150&width=200"
                         alt="Community workshop"
-                        className="w-48 h-32 object-cover rounded-xl shadow-lg"
+                        className="w-48 h-32 object-cover shadow-lg"
                       />
                     </div>
 
                     {/* Floating Info Cards */}
-                    <div className="absolute top-4 left-4 bg-white rounded-lg p-3 shadow-lg z-30">
+                    <div className="absolute top-4 left-4 bg-white rounded-none p-3 shadow-lg z-30">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
                           <Phone className="h-4 w-4 text-red-600" />
@@ -157,7 +103,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <div className="absolute bottom-4 right-4 bg-white rounded-lg p-3 shadow-lg z-30">
+                    <div className="absolute bottom-4 right-4 bg-white rounded-none p-3 shadow-lg z-30">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                           <Heart className="h-4 w-4 text-green-600" />
@@ -170,16 +116,15 @@ export default function HomePage() {
                     </div>
 
                     {/* Background Decoration */}
-                    <div className="absolute -top-8 -right-8 w-72 h-72 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl opacity-20 -z-10"></div>
-                    <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl opacity-20 -z-10"></div>
+                    <div className="absolute -top-8 -right-8 w-72 h-72 bg-gradient-to-br from-blue-400 to-purple-500 rounded-none opacity-20 -z-10"></div>
+                    <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gradient-to-br from-purple-400 to-pink-500 rounded-none opacity-20 -z-10"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Scroll Indicator */}
         </section>
+
         {/* About Us Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -204,7 +149,7 @@ export default function HomePage() {
 
                   {/* Key Services */}
 
-                  <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700">
+                  <Button size="lg" asChild className="rounded-none bg-blue-600 hover:bg-blue-700">
                     <Link href="/about" className="inline-flex items-center gap-2">
                       Know More About Us
                       <ArrowRight className="h-5 w-5" />
@@ -220,12 +165,12 @@ export default function HomePage() {
                       alt="Luminara team supporting community"
                       height={500}
                       width={500}
-                      className="rounded-lg shadow-2xl w-full md:m-5"
+                      className="shadow-2xl w-full md:m-5"
                     />
                   </div>
 
                   {/* Floating Cards */}
-                  <div className="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg z-20">
+                  <div className="absolute -top-6 -left-6 bg-white p-4  shadow-lg z-20">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                         <Heart className="h-6 w-6 text-green-600" />
@@ -237,7 +182,7 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg z-20">
+                  <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-none shadow-lg z-20">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                         <Globe className="h-6 w-6 text-blue-600" />
@@ -271,39 +216,7 @@ export default function HomePage() {
 
               {/* Blog Posts Grid */}
               <div className="grid lg:grid-cols-3 gap-8 mb-12">
-                {blogPosts.map((post, index) => (
-                  <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={post.image || "/placeholder.svg"}
-                        alt={post.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                          {post.category}
-                        </span>
-                      </div>
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                        {post.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                        <span>{post.date}</span>
-                      </div>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all bg-transparent"
-                      >
-                        Read More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+                <RecentBlogs />
               </div>
 
               {/* View All Blogs Button */}
@@ -312,7 +225,7 @@ export default function HomePage() {
                   size="lg"
                   variant="outline"
                   asChild
-                  className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-transparent"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-transparent rounded-none"
                 >
                   <Link href="/blog" className="inline-flex items-center gap-2">
                     View All Helpline Articles
