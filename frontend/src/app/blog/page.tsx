@@ -9,7 +9,6 @@ import fetchBlogs from "@/helpers/getBlogs"
 
 
 export default async function BlogPage() {
-  const blogs = await fetchBlogs();
 
   return (
     <div className="min-h-screen bg-white">
@@ -34,7 +33,7 @@ export default async function BlogPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
-                {blogs.data && blogs.data.map((blog: any) => (
+                {/* {blogs.data && blogs.data.map((blog: any) => (
                   <Card key={1} className="rounded-none pt-0 overflow-hidden hover:shadow-lg transition-shadow">
                     <Image
                       src={`${blog.Banner?.url}`}
@@ -64,7 +63,7 @@ export default async function BlogPage() {
                       </div>
                     </CardContent>
                   </Card>
-                ))}
+                ))} */}
 
 
               </div>

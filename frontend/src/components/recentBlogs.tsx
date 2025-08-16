@@ -6,11 +6,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 export async function RecentBlogs() {
-    const blogs = await fetchRecentBlogs();
+    // const blogs = await fetchRecentBlogs();
 
     return (
         <>
-            {blogs.data && blogs.data.map((blog: any) => (
+            {/* {blogs.data && blogs.data.map((blog: any) => (
                 <Card key={1} className="rounded-none pt-0 overflow-hidden hover:shadow-lg transition-shadow">
                     <Image
                         src={`${blog.Banner?.url}`}
@@ -40,7 +40,7 @@ export async function RecentBlogs() {
                         </div>
                     </CardContent>
                 </Card>
-            ))}
+            ))} */}
         </>
     );
 }

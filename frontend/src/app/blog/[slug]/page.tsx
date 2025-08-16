@@ -13,18 +13,7 @@ export default async function Blog({
     params: Promise<{ slug: string }>;
 }) {
     const { slug } = await params;
-    let blog;
-    try {
-        blog = await fetchBlog(slug);
-    } catch (error) {
-        return <NotFound />;
-    }
 
-    if (blog.data.length == 0) {
-        return <NotFound />
-    }
-
-    const content = blog?.data[0]?.Content;
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
@@ -40,7 +29,7 @@ export default async function Blog({
                 <article className="bg-white rounded-none shadow-sm overflow-hidden">
                     <div className="relative w-full aspect-[16/9]">
                         <Image
-                            src={`${blog.data[0].Banner?.url}`}
+                            src='/img1.jpg'
                             alt="Blog post hero image"
                             fill
                             className="object-cover"
@@ -50,22 +39,22 @@ export default async function Blog({
                     <div className="p-6 md:p-8">
 
                         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                            5 Simple Mindfulness Techniques to Reduce Daily Stress
+                            Blog Post Title
                         </h1>
 
                         <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
                             <div className="flex items-center space-x-2">
                                 <User className="h-4 w-4" />
-                                <span>{blog.data[0].Author}</span>
+                                <span>Author</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Calendar className="h-4 w-4 pr-1" />
-                                {new Date(blog.data[0].createdAt).toLocaleString('default', { month: 'long', year: 'numeric' })}
+                                Date
                             </div>
                         </div>
 
                         <div className="prose prose-lg max-w-none">
-                            <ContentRenderer content={content} />
+                            content
                         </div>
 
 
