@@ -28,11 +28,11 @@ export function TeamMemberModal({ member, isOpen, onClose }: TeamMemberModalProp
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white rounded-none shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-white shadow-lg transition-colors"
+          className="absolute top-4 right-4 z-10 p-2 rounded-none bg-white/80 hover:bg-white shadow-lg transition-colors"
         >
           <X className="w-5 h-5 text-gray-600" />
         </button>
@@ -50,7 +50,7 @@ export function TeamMemberModal({ member, isOpen, onClose }: TeamMemberModalProp
               />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">{member.name}</h2>
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-white font-medium">
+            <div className="inline-flex items-center px-4 py-2 rounded-none bg-blue-600 text-white font-medium">
               {member.role}
             </div>
           </div>

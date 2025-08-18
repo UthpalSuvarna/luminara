@@ -3,6 +3,8 @@
 import { TeamMemberCard } from "@/components/TeamMemberCard"
 import { TeamMemberModal } from "@/components/TeamMemberModal"
 import { useState, useEffect } from "react"
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 interface TeamMember {
   name: string
@@ -47,51 +49,54 @@ export default function Page() {
   const volunteers = teamMembers.filter((member) => member.type === "volunteer")
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <main className="py-20">
-        <div className="container mx-auto px-4 max-w-7xl">
-          {/* Hero Section */}
-          <div className="text-center mb-20">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Meet Our
-              <span className="text-blue-600 block">Amazing Team</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Get to know the passionate individuals who drive our mission forward with dedication and expertise.
-            </p>
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      <main>
+        <section className="bg-gradient-to-br from-blue-50 to-green-50 py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Meet Our Team</h1>
+              <p className="text-xl text-gray-700">
+                The passionate individuals who drive our mission forward.
+              </p>
+            </div>
           </div>
+        </section>
 
-          <section className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our experienced leaders guide the organization's vision and strategic direction.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {leads.map((member) => (
-                <TeamMemberCard key={member.name} member={member} onClick={handleMemberClick} />
-              ))}
-            </div>
-          </section>
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Our experienced leaders guide the organization's vision and strategic direction.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {leads.map((member) => (
+                  <TeamMemberCard key={member.name} member={member} onClick={handleMemberClick} />
+                ))}
+              </div>
 
-          <section>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Volunteers</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Dedicated community members who generously donate their time and skills to our cause.
-              </p>
+              <div className="text-center mt-20 mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Volunteers</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Dedicated community members who generously donate their time and skills to our cause.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {volunteers.map((member) => (
+                  <TeamMemberCard key={member.name} member={member} onClick={handleMemberClick} />
+                ))}
+              </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {volunteers.map((member) => (
-                <TeamMemberCard key={member.name} member={member} onClick={handleMemberClick} />
-              ))}
-            </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
 
       <TeamMemberModal member={selectedMember} isOpen={isModalOpen} onClose={handleCloseModal} />
+      <Footer />
     </div>
   )
 }

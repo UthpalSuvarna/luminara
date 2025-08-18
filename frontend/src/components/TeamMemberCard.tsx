@@ -31,7 +31,7 @@ export function TeamMemberCard({ member, onClick }: TeamMemberCardProps) {
 
   return (
     <div
-      className="group cursor-pointer bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 hover:-translate-y-1"
+      className="group cursor-pointer bg-white rounded-none shadow-lg hover:shadow-xl transition-all duration-300 p-6 hover:-translate-y-1"
       onClick={() => onClick(member)}
     >
       <div className="text-center">
