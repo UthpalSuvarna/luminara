@@ -9,11 +9,11 @@ import { Footer } from '@/components/footer'
 interface TeamMember {
   name: string
   role: string
-  type: "lead" | "volunteer"
   imageUrl: string
-  description: string
-  email: string
+  description?: string
+  email?: string
   phone?: string
+  type: "lead" | "volunteer"
 }
 
 export default function Page() {
