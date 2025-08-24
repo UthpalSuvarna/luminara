@@ -1,19 +1,38 @@
-import fetchBlog from "@/helpers/getBlog";
+import { getBlog } from "@/helpers/getBlog";
 import { Calendar, ArrowLeft, User } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import ContentRenderer from "./ContentRenderer";
 import NotFound from "./not-found";
+import { Blog } from "@/types/blog";
+import { Metadata } from "next";
 
-export default async function Blog({
-    params,
-}: {
+
+type PageProps = {
     params: Promise<{ slug: string }>;
-}) {
-    const { slug } = await params;
+};
 
+
+export async function generateMetadata({
+    params,
+}: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const blog: Blog = await getBlog(slug);
+    return {
+        title: blog.title,
+    };
+}
+
+export default async function BlogPage({
+    params,
+}: PageProps) {
+    const { slug } = await params;
+    const blog: Blog = await getBlog(slug);
+
+    if (!blog) {
+        return <NotFound />;
+    }
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
@@ -29,7 +48,7 @@ export default async function Blog({
                 <article className="bg-white rounded-none shadow-sm overflow-hidden">
                     <div className="relative w-full aspect-[16/9]">
                         <Image
-                            src='/img1.jpg'
+                            src={'/img1.jpg'}
                             alt="Blog post hero image"
                             fill
                             className="object-cover"
@@ -39,23 +58,21 @@ export default async function Blog({
                     <div className="p-6 md:p-8">
 
                         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                            Blog Post Title
+                            {blog.title}
                         </h1>
 
                         <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
                             <div className="flex items-center space-x-2">
                                 <User className="h-4 w-4" />
-                                <span>Author</span>
+                                <span>{blog.author}</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Calendar className="h-4 w-4 pr-1" />
-                                Date
+                                {new Date(blog?.date).toLocaleDateString()}
                             </div>
                         </div>
 
-                        <div className="prose prose-lg max-w-none">
-                            content
-                        </div>
+                        <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: blog.contentHtml }} />
 
 
                     </div>

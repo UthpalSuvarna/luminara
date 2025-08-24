@@ -1,21 +1,22 @@
-const fetchBlogs = async () => {
-    const reqOptions = {
-        headers: {
-            Authorization: `Bearer ${process.env.BACKEND_API_TOKEN}`
-        },
-        next: {
-            revalidate: 3600 // every hour
-        }
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+
+const blogsDirectory = path.join(process.cwd(), 'blogs');
+
+export const getBlogs = () => {
+  const fileNames = fs.readdirSync(blogsDirectory);
+  const allBlogsData = fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.md$/, '');
+    const fullPath = path.join(blogsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
+
+    return {
+      slug,
+      ...matterResult.data,
     };
+  });
 
-    try {
-        const request = await fetch(`${process.env.BACKEND_API_ENDPOINT}/api/blogs?populate=*`, reqOptions);
-        const response = await request.json();
-        return response;
-    } catch (error) {
-        console.error("Error fetching blogs:", error);
-        return {}; // Return an empty object or array depending on your requirements
-    }
-}
-
-export default fetchBlogs;
+  return allBlogsData;
+};

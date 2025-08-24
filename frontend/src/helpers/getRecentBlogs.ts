@@ -1,22 +1,37 @@
-const fetchRecentBlogs = async () => {
-    try {
-        const reqOptions = {
-            headers: {
-                Authorization: `Bearer ${process.env.BACKEND_API_TOKEN}`
-            },
-            next: {
-                revalidate: 3600 // every hour
-            }
-        };
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
-        const request = await fetch(`${process.env.BACKEND_API_ENDPOINT}/api/blogs?populate=*&pagination[limit]=3&sort[0]=createdAt:desc`, reqOptions);
-        const response = await request.json();
+const blogsDirectory = path.join(process.cwd(), 'blogs');
 
-        return response;
-    } catch (error) {
-        console.error('Error fetching recent blogs:', error);
-        return [];
-    }
-}
+type BlogData = {
+    slug: string;
+    date: string;
+    [key: string]: any;
+};
 
-export default fetchRecentBlogs;
+export const getRecentBlogs = () => {
+    const fileNames = fs.readdirSync(blogsDirectory);
+    const allBlogsData: BlogData[] = fileNames.map((fileName) => {
+        const slug = fileName.replace(/\.md$/, '');
+        const fullPath = path.join(blogsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
+
+        return {
+            slug,
+            ...matterResult.data,
+        } as BlogData;
+    });
+
+    const sortedBlogs = allBlogsData.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateB.getTime() - dateA.getTime();
+    });
+
+    return sortedBlogs.slice(0, 3);
+};
+
+
+export default getRecentBlogs;

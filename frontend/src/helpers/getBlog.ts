@@ -1,20 +1,26 @@
-async function fetchBlog(slug: string) {
-    const reqOptions = {
-        headers: {
-            Authorization: `Bearer ${process.env.BACKEND_API_TOKEN}`
-        },
-        next: {
-            revalidate: 3600 // everyhour
-        }
-    };
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
+import { Blog } from '@/types/blog';
 
-    const response = await fetch(`${process.env.BACKEND_API_ENDPOINT}/api/blogs?populate=*&filters[slug][$eq]=${slug}`, reqOptions);
-    if (!response.ok) {
-        throw new Error(`Failed to fetch blogs: ${response.statusText}`);
-    }
+const blogsDirectory = path.join(process.cwd(), 'blogs');
 
-    const jsonResponse = await response.json();
-    return jsonResponse;
-}
+export const getBlog = async (slug: string): Promise<Blog> => {
+  const fullPath = path.join(blogsDirectory, `${slug}.md`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-export default fetchBlog;
+  const matterResult = matter(fileContents);
+
+  const processedContent = await remark()
+    .use(html)
+    .process(matterResult.content);
+  const contentHtml = processedContent.toString();
+
+  return {
+    slug,
+    contentHtml,
+    ...(matterResult.data as { title: string; author: string; date: string }),
+  };
+};
