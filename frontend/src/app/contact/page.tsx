@@ -23,21 +23,39 @@ export default function ContactPage() {
     message: "",
     inquiryType: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submissionStatus, setSubmissionStatus] = useState<"success" | "error" | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-      inquiryType: "",
-    })
-    alert("Thank you for your message. We'll get back to you soon.")
+    setIsSubmitting(true)
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmissionStatus("success")
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          inquiryType: "",
+        })
+      } else {
+        setSubmissionStatus("error")
+      }
+    } catch (error) {
+      setSubmissionStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (field: string, value: string) => {
@@ -153,9 +171,16 @@ export default function ContactPage() {
                         />
                       </div>
 
-                      <Button type="submit" className="bg-blue-600 hover:bg-blue-700 w-full rounded-none">
-                        Send Message
+                      <Button type="submit" className="bg-blue-600 hover:bg-blue-700 w-full rounded-none" disabled={isSubmitting}>
+                        {isSubmitting ? "Sending..." : "Send Message"}
                       </Button>
+
+                      {submissionStatus === "success" && (
+                        <div className="text-green-600">Thank you for your message. We'll get back to you soon.</div>
+                      )}
+                      {submissionStatus === "error" && (
+                        <div className="text-red-600">Something went wrong. Please try again.</div>
+                      )}
                     </form>
                   </CardContent>
                 </Card>
