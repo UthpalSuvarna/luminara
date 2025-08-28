@@ -45,7 +45,7 @@ export function Footer() {
             <ul className="space-y-3 text-base font-sans">
               <li>
                 <Link href="/helpline" className="text-gray-300 hover:text-white transition-colors duration-200">
-                  24/7 Helpline
+                  24/7 Lifeline
                 </Link>
               </li>
               <li>
@@ -59,7 +59,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-3 text-lg text-red-400 font-sans">Emergency Support</h4>
             <div className="mb-4">
-              <p className="text-base text-gray-300 mb-2 font-sans">24/7 Suicide Prevention Helpline</p>
+              <p className="text-base text-gray-300 mb-2 font-sans">24/7 Suicide Prevention Lifeline</p>
             </div>
             <div className="bg-red-900/20 p-4 rounded-none border border-red-800">
               <p className="text-sm text-red-200 font-sans">

@@ -1,13 +1,17 @@
-import { CrisisBanner } from "@/components/crisis-banner"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Phone, MessageCircle, Globe, Clock, Shield, AlertTriangle, CheckCircle } from "lucide-react"
 import Image from "next/image"
+import teamData from '@/../public/lifeline-team.json';
+
+interface LifelineTeamMember {
+  name: string;
+  role: string;
+  imageUrl: string;
+}
 
 export default function LifelinePage() {
+  const lifelineTeam: LifelineTeamMember[] = teamData.lifelineTeam;
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -17,32 +21,34 @@ export default function LifelinePage() {
         <section className="bg-white py-10 md:py-16 relative overflow-hidden">
           <div className="container max-w-7xl mx-auto relative px-4">
             <div className="relative rounded-none overflow-hidden shadow-lg max-h-[600px]">
-              <img
-                src="/bg2.jpg"
-                alt="Suicide Helpline Banner"
-                className="w-full h-auto object-contain"
-              />
+              <div className="aspect-[3/1] w-full">
+                <img
+                  src="/bg3.jpg"
+                  alt="Suicide Helpline Banner"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               {/* Content Overlay */}
               <div className="absolute inset-0 flex items-center justify-end px-6 md:px-12 py-8">
                 <div className="max-w-lg text-right">
-                  <h1 className="text-base sm:text-xl md:text-2xl lg:text-5xl font-bold text-gray-900">
+                  <h1 className="text-base sm:text-xl md:text-2xl lg:text-5xl font-bold text-gray-100">
                     Suicide Lifeline
                   </h1>
-                  <p className="text-xs sm:text-sm md:text-base lg:text-2xl font-medium text-gray-800">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-2xl font-medium text-gray-50">
                     We are here to listen
                   </p>
 
                   {/* Visible only on lg and above */}
-                  <p className="hidden lg:block text-sm lg:text-lg text-gray-700 mt-4 font-medium">
+                  <p className="hidden lg:block text-sm lg:text-lg text-gray-100 mt-4 font-medium">
                     For free, confidential, and non-judgmental support.
                   </p>
 
-                  <p className="text-base sm:text-xl lg:text-4xl font-bold text-gray-900 mt-4">
+                  <p className="text-base sm:text-xl lg:text-4xl font-bold text-gray-100 mt-4">
                     Call: 0824-2983444
                   </p>
-                  <p className="text-xs sm:text-sm lg:text-lg text-gray-700">
-                    Email: <a href="mailto:lifelineconnect25@gmail.com" className="text-blue-600 underline">lifelineconnect25@gmail.com</a>
+                  <p className="text-xs sm:text-sm lg:text-lg text-gray-100">
+                    Email: <a href="mailto:lifelineconnect25@gmail.com" className="text-blue-100 underline">lifelineconnect25@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -78,6 +84,42 @@ export default function LifelinePage() {
 
               <br></br>
 
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 bg-gray-50">
+          <div className="container max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Meet Our Lifeline Training Team</h2>
+            <div className="overflow-x-auto">
+              <table className="min-w-full bg-white border border-gray-200">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Avatar</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Post</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {lifelineTeam.map((member) => (
+                    <tr key={member.name}>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        {member.imageUrl ? (
+                          <Image src={member.imageUrl} alt="Image" width={40} height={40} className="rounded-full" />
+                        ) : (
+                          <div className="w-10 h-10 rounded-full bg-blue-500"></div>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div className="text-sm font-medium text-gray-900">{member.name}</div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div className="text-sm text-gray-500">{member.role}</div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>

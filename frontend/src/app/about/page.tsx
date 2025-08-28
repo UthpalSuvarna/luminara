@@ -100,10 +100,10 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8 ">Who We Help</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8 ">Who do we serve...</h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-8 font-sans">
                 We welcome anyone seeking a safe space to talk, heal, or just be heard—whether you're in crisis,
-                recovering from trauma, supporting a loved one, or simply looking for tools to improve emotional
+                recovering from trauma, supporting a loved one, or simply looking for tools to improve your emotional
                 well-being.
               </p>
               <div className="flex items-center text-blue-600">
@@ -133,7 +133,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <p className="text-lg text-gray-600 mt-6 italic font-sans">
-                Our trained mental health professionals are here to guide, listen, and walk beside
+                Our trained mental health professionals are here to listen, guide, and walk beside
                 you—without judgment.
               </p>
             </div>
@@ -193,7 +193,7 @@ export default function AboutUs() {
                 <ul className="text-lg text-gray-700 space-y-2 font-sans">
                   <li>• 36 trained first responders available 24/7</li>
                   <li>• 12 back-up clinicians and experts</li>
-                  <li>• Psychiatrists, psychologists, counselors</li>
+                  <li>• Psychiatrists, Psychologists, Counselors</li>
                   <li>• Social workers and lawyers</li>
                 </ul>
               </div>
@@ -271,7 +271,7 @@ export default function AboutUs() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-10 ">Need Help? We're Here for You</h2>
           <p className="text-2xl mb-10 font-sans">
-            If you or someone you know needs immediate help, please reach out to our 24/7 Lifeline.
+            If you have thoughts of self harm, please reach out to our 24/7 Lifeline.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-10">

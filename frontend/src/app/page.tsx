@@ -97,8 +97,8 @@ export default function HomePage() {
                           <Phone className="h-4 w-4 text-red-600" />
                         </div>
                         <div>
-                          <div className="font-semibold text-gray-900 text-sm">24/7 Helpline</div>
-                          <div className="text-xs text-gray-600">Always Available</div>
+                          <div className="font-semibold text-gray-900 text-sm">24/7 Lifeline</div>
+                          <div className="text-xs text-gray-600">At Your Service</div>
                         </div>
                       </div>
                     </div>
@@ -133,9 +133,9 @@ export default function HomePage() {
                 <div>
                   <div className="mb-6">
                     <span className="text-blue-600 font-semibold text-lg">About Luminara</span>
-                    <h2 className="text-4xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+                    <h2 className="text-4xl md:text-4xl font-bold text-blue-600 mt-2 mb-6">
                       Mental Health
-                      <span className="text-blue-600"> Wellness Hub</span>
+                      <span className="text-blue-600"> Wellness Hub. </span>
                     </h2>
                   </div>
 
@@ -144,7 +144,7 @@ export default function HomePage() {
                   </p>
 
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                    Luminara offers free counseling, group support sessions, mindfulness workshops, and self-care resources. Our trained mental health volunteers and professionals are here to guide, listen, and walk beside you—without judgment.
+                    Luminara offers free counseling, group support sessions, mindfulness workshops, and self-care resources. Our trained mental health professionals are here to listen, guide, and walk beside you—without judgment.
                   </p>
 
                   {/* Key Services */}
@@ -189,7 +189,7 @@ export default function HomePage() {
                       </div>
                       <div>
                         <div className="font-bold text-gray-900">24/7</div>
-                        <div className="text-sm text-gray-600">Always Available</div>
+                        <div className="text-sm text-gray-600">At Your Service</div>
                       </div>
                     </div>
                   </div>
