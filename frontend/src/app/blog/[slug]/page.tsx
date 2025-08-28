@@ -55,13 +55,13 @@ export default async function BlogPage({
                         />
                     </div>
 
-                    <div className="p-6 md:p-8">
+                    <div className="p-6 md:p-8 [&>*]:mb-4">
 
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
                             {blog.title}
                         </h1>
 
-                        <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
+                        <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
                             <div className="flex items-center space-x-2">
                                 <User className="h-4 w-4" />
                                 <span>{blog.author}</span>
@@ -72,8 +72,7 @@ export default async function BlogPage({
                             </div>
                         </div>
 
-                        <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: blog.contentHtml }} />
-
+                        <div className="prose prose-lg max-w-none space-y-4" dangerouslySetInnerHTML={{ __html: blog.contentHtml }} />
 
                     </div>
                 </article>
