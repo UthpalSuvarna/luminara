@@ -37,6 +37,11 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/gallery" className="text-gray-300 hover:text-white transition-colors duration-200">
+                  Gallery
+                </Link>
+              </li>
             </ul>
           </div>
 

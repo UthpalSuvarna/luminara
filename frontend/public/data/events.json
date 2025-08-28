@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Community Mental Health Awareness",
+      "description": "We conducted a mental health awareness program in the local community, reaching out to over 200 people.",
+      "fullDescription": "Our comprehensive mental health awareness program brought together community leaders, healthcare professionals, and local residents to discuss the importance of mental wellness. The event featured interactive workshops, expert talks, and resource sharing sessions that helped break down stigma and promote understanding.",
+      "image": "/img1.jpg",
+      "date": "March 15, 2024",
+      "location": "Community Center, Downtown",
+      "attendees": 200,
+      "category": "Awareness"
+    },
+    {
+      "id": 2,
+      "title": "Youth Mental Wellness Workshop",
+      "description": "Interactive workshop focused on supporting teenage mental health and building resilience.",
+      "fullDescription": "This specialized workshop was designed for teenagers and young adults, featuring peer-to-peer discussions, coping strategy sessions, and creative expression activities. Mental health professionals guided participants through understanding emotions, stress management, and building healthy relationships.",
+      "image": "/img1.jpg",
+      "date": "April 22, 2024",
+      "location": "High School Auditorium",
+      "attendees": 85,
+      "category": "Workshop"
+    },
+    {
+      "id": 3,
+      "title": "Family Support Group Meeting",
+      "description": "Monthly gathering for families affected by mental health challenges to share experiences and support.",
+      "fullDescription": "Our monthly family support group provides a safe space for families to connect, share their experiences, and learn from one another. Led by licensed therapists, these sessions focus on communication strategies, understanding mental health conditions, and building stronger family bonds.",
+      "image": "/img1.jpg",
+      "date": "May 10, 2024",
+      "location": "Wellness Center",
+      "attendees": 45,
+      "category": "Support Group"
+    },
+    {
+      "id": 4,
+      "title": "Mental Health First Aid Training",
+      "description": "Professional training session for community volunteers and healthcare workers.",
+      "fullDescription": "This intensive training program equipped community volunteers and healthcare workers with essential mental health first aid skills. Participants learned how to identify signs of mental health crises, provide initial support, and connect individuals with appropriate professional help.",
+      "image": "/img1.jpg",
+      "date": "June 5, 2024",
+      "location": "Medical Training Center",
+      "attendees": 120,
+      "category": "Training"
+    },
+    {
+      "id": 5,
+      "title": "Mindfulness & Meditation Retreat",
+      "description": "Day-long retreat focusing on mindfulness practices and stress reduction techniques.",
+      "fullDescription": "Our peaceful retreat offered participants a chance to disconnect from daily stressors and learn practical mindfulness techniques. The program included guided meditation sessions, breathing exercises, nature walks, and workshops on incorporating mindfulness into daily life.",
+      "image": "/img1.jpg",
+      "date": "July 18, 2024",
+      "location": "Serenity Gardens",
+      "attendees": 60,
+      "category": "Retreat"
+    },
+    {
+      "id": 6,
+      "title": "Workplace Mental Health Seminar",
+      "description": "Corporate seminar addressing mental health in professional environments.",
+      "fullDescription": "This corporate-focused seminar addressed the growing need for mental health awareness in workplace settings. Topics included recognizing burnout, creating supportive work environments, managing stress, and implementing employee wellness programs that prioritize mental health.",
+      "image": "/img1.jpg",
+      "date": "August 12, 2024",
+      "location": "Business Conference Center",
+      "attendees": 150,
+      "category": "Seminar"
+    }
+  ]
+}
