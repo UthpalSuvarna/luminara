@@ -39,18 +39,17 @@ export function TeamMemberModal({ member, isOpen, onClose }: TeamMemberModalProp
 
         {/* Header with image */}
         <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 p-8 pb-16">
-          <div className="text-center">
-            <div className="relative w-32 h-32 mx-auto mb-6">
+          <div className="text-center mt-10">
+            <div className="relative w-32 h-48 mx-auto mb-6">
               <Image
-                src={member.imageUrl || "/placeholder.svg"}
+                src={`${member.imageUrl}` || "/placeholder.svg"}
                 alt={`${member.name} - ${member.role}`}
                 fill
-                className="object-cover rounded-full ring-4 ring-white shadow-lg"
-                sizes="128px"
+                className="object-cover  shadow-lg"
               />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">{member.name}</h2>
-            <div className="inline-flex items-center px-4 py-2 rounded-none bg-blue-600 text-white font-medium">
+            <div className="inline-flex items-center px-2 py-1 rounded-none bg-blue-600 text-white font-medium text-sm">
               {member.role}
             </div>
           </div>
@@ -67,7 +66,7 @@ export function TeamMemberModal({ member, isOpen, onClose }: TeamMemberModalProp
           )}
 
           {/* Contact Info */}
-          <div className="border-t pt-6">
+          {/* <div className="border-t pt-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-3">Contact Information</h3>
             <div className="space-y-2">
               {member.email && (
@@ -105,7 +104,7 @@ export function TeamMemberModal({ member, isOpen, onClose }: TeamMemberModalProp
                 </div>
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

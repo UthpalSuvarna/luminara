@@ -1,7 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
-import teamData from '@/../public/lifeline-team.json';
+import teamData from '@/../public/data/lifeline-team.json';
 
 interface LifelineTeamMember {
   name: string;

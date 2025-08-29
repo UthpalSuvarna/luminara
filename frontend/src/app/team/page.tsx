@@ -24,7 +24,7 @@ export default function Page() {
   useEffect(() => {
     const fetchTeamData = async () => {
       try {
-        const response = await fetch("/team-data.json")
+        const response = await fetch("data/team-data.json")
         const data = await response.json()
         setTeamMembers(data.teamMembers)
       } catch (error) {
@@ -66,19 +66,19 @@ export default function Page() {
 
         <section className="py-16">
           <div className="container mx-auto max-w-7xl px-4">
-            <div className="text-center mb-12">
+            {/* <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our experienced leaders guide the organization's vision and strategic direction.
               </p>
-            </div>
+            </div> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {leads.map((member) => (
                 <TeamMemberCard key={member.name} member={member} onClick={handleMemberClick} />
               ))}
             </div>
 
-            <div className="text-center mt-20 mb-12">
+            {/* <div className="text-center mt-20 mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Volunteers</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Dedicated community members who generously donate their time and skills to our cause.
@@ -88,7 +88,7 @@ export default function Page() {
               {volunteers.map((member) => (
                 <TeamMemberCard key={member.name} member={member} onClick={handleMemberClick} />
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
       </main>

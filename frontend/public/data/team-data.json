@@ -1,0 +1,49 @@
+{
+  "teamMembers": [
+    {
+      "name": "Dr. Lavina M. Noronha",
+      "role": "Operational Lead",
+      "type": "lead",
+      "imageUrl": "/team/lavina-noronha.jpg",
+      "description": "Dr. Lavina M. Noronha is a highly experienced social worker, counselor, and educator with deep roots in academia and direct patient care. She coordinates the Suicide Lifeline and leads the residential hospice facility in Vamanjoor. An alumna of NIMHANS, Bangalore, she holds a Ph.D. from the University of Illinois, Urbana-Champaign, with a thesis on parental responses to adolescent suicide attempts.",
+      "email": "",
+      "phone": ""
+    },
+    {
+      "name": "Mrs. Usha Rao",
+      "role": "Operational Lead",
+      "type": "lead",
+      "imageUrl": "/team/usha-rao.jpg",
+      "description": "Usha Rao is a seasoned expert in education with over 25 years of experience. She has worked with Principals and Institutions to design workshops and promote sustainable growth. Passionate about understanding and nurturing the human mind, she supports individuals facing educational, emotional, and linguistic challenges. As a representative of the Suicide Helpline, she implements Life Skills Programs and Mental Awareness Drives in schools and colleges.",
+      "email": "",
+      "phone": ""
+    },
+    {
+      "name": "Allen C. A. Pereira",
+      "role": "Guidance Council",
+      "type": "lead",
+      "imageUrl": "/team/allen-pereira.jpg",
+      "description": "Allen C. A. Pereira is a seasoned professional with over 40 years in banking and finance, specializing in Human Resource Management. He served as the Chairman & Managing Director of Bank of Maharashtra and as a Director at the National Institute of Bank Management, Pune. He also contributes to academic, linguistic, and cultural organizations and supports NGOs in social welfare and environmental conservation.",
+      "email": "",
+      "phone": ""
+    },
+    {
+      "name": "Shalini K. Sharma",
+      "role": "Guidance Council",
+      "type": "lead",
+      "imageUrl": "/team/shalini-sharma.jpg",
+      "description": "Shalini K. Sharma is an experienced mental health professional with three decades in training and facilitation. An alumna of NIMHANS, she designs and implements programs for students, teachers, and administrators. As a Master Facilitator at the College of Leadership and HRD, she continues to train on mental health and employability while also leading environmental initiatives in her community.",
+      "email": "",
+      "phone": ""
+    },
+    {
+      "name": "Joseph D'Silva",
+      "role": "Guidance Council",
+      "type": "lead",
+      "imageUrl": "/team/joseph-dsilva.jpg",
+      "description": "Joseph D'Silva is a seasoned finance professional with a distinguished career at Vijaya Bank, where he served across branches in India until retiring in 2010. Outside his professional life, he is an avid gardener, sports enthusiast, and dedicated social worker.",
+      "email": "",
+      "phone": ""
+    }
+  ]
+}

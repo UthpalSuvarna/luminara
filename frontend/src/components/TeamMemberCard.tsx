@@ -36,16 +36,16 @@ export function TeamMemberCard({ member, onClick }: TeamMemberCardProps) {
     >
       <div className="text-center">
         {/* Image Container */}
-        <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-6">
+        <div className="relative w-24 h-32 sm:w-30 sm:h-40 lg:w-36 lg:h-48 mx-auto mb-6">
           <Image
-            src={imageUrl || "/placeholder.svg"}
+            src={`${imageUrl}` || "/placeholder.svg"}
             alt={`${name} - ${role}`}
             fill
-            className="object-cover rounded-full ring-4 ring-white shadow-md group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 640px) 128px, (max-width: 1024px) 160px, 192px"
+            className="object-cover rounded-none ring-4 ring-white shadow-md group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 640px) 96px, (max-width: 1024px) 120px, 144px"
           />
           {/* Hover overlay */}
-          <div className="absolute inset-0 rounded-full bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
         {/* Content */}
