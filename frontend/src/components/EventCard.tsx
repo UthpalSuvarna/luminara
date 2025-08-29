@@ -12,7 +12,6 @@ interface Event {
   image: string
   date: string
   location: string
-  attendees: number
   category: string
 }
 
@@ -61,10 +60,7 @@ export function EventCard({ event, onClick }: EventCardProps) {
             <Calendar className="w-4 h-4" />
             {event.date}
           </div>
-          <div className="flex items-center gap-1">
-            <Users className="w-4 h-4" />
-            {event.attendees}
-          </div>
+          
         </div>
       </div>
     </div>

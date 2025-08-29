@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
   try {
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'luminaramhhub@gmai.com', // Replace with your email address
+      to: 'luminaramhhub@gmail.com', // Replace with your email address
       subject: `New contact form submission: ${subject}`,
       react: ContactFormEmail({
         name,

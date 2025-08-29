@@ -13,7 +13,6 @@ interface Event {
   image: string
   date: string
   location: string
-  attendees: number
   category: string
 }
 

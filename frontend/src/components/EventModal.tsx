@@ -14,7 +14,6 @@ interface Event {
   image: string
   date: string
   location: string
-  attendees: number
   category: string
 }
 
@@ -85,13 +84,7 @@ export function EventModal({ event, isOpen, onClose }: EventModalProps) {
                 <p className="font-semibold text-gray-900">{event.location}</p>
               </div>
             </div>
-            <div className="flex items-center gap-2 p-3 bg-purple-50 rounded-lg">
-              <Users className="w-5 h-5 text-purple-600" />
-              <div>
-                <p className="text-sm text-gray-600">Attendees</p>
-                <p className="font-semibold text-gray-900">{event.attendees}</p>
-              </div>
-            </div>
+            
           </div>
 
           <div>
