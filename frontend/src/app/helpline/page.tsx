@@ -23,7 +23,7 @@ export default function LifelinePage() {
             <div className="relative rounded-none overflow-hidden shadow-lg max-h-[600px]">
               <div className="aspect-[3/1] w-full">
                 <img
-                  src="/bg3.jpg"
+                  src="/bg4.jpg"
                   alt="Suicide Helpline Banner"
                   className="w-full h-full object-cover"
                 />
