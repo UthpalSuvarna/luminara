@@ -1,3 +1,6 @@
+"use client"
+
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Users, Shield, Lightbulb, Phone } from "lucide-react"
@@ -5,7 +8,45 @@ import Link from "next/link"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import Image from "next/image"
+import { PathToHealingCard } from "@/components/PathToHealingCard"
+import { PathToHealingModal } from "@/components/PathToHealingModal"
+
+interface PathToHealing {
+  id: number
+  title: string
+  description: string
+  image: string
+}
+
 export default function AboutUs() {
+  const [pathToHealing, setPathToHealing] = useState<PathToHealing[]>([])
+  const [loading, setLoading] = useState(true)
+  const [selectedItem, setSelectedItem] = useState<PathToHealing | null>(null)
+
+  useEffect(() => {
+    const fetchPathToHealing = async () => {
+      try {
+        const response = await fetch("/data/pathToHealing.json")
+        const data = await response.json()
+        setPathToHealing(data.pathToHealing ?? [])
+      } catch (error) {
+        console.error("Error loading pathToHealing data:", error)
+        setPathToHealing([])
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchPathToHealing()
+  }, [])
+
+  const handleCardClick = (item: PathToHealing) => {
+    setSelectedItem(item)
+  }
+
+  const handleCloseModal = () => {
+    setSelectedItem(null)
+  }
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Navigation */}
@@ -211,9 +252,9 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Sustainability Model */}
+      {/* A Sustainable Path to Healing */}
       <section className="py-16 bg-green-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1">
           <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center ">
             A Sustainable Path to Healing
           </h2>
@@ -222,48 +263,19 @@ export default function AboutUs() {
             organization, ensuring that affordability is never a barrier to receiving care.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-white rounded-none">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Community Fundraising</h3>
-                <p className="text-sm text-gray-600">Roots & Shoots Plant Sales and Cherished Seconds Rummage Sales</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white rounded-none">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Accessible Services</h3>
-                <p className="text-sm text-gray-600">Pay-what-you-can counseling with sliding scale options</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white rounded-none">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-6 w-6 text-purple-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Grant Opportunities</h3>
-                <p className="text-sm text-gray-600">Actively pursuing CSR grants for operational support</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white rounded-none">
-              <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="h-6 w-6 text-yellow-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2">Community Outreach</h3>
-                <p className="text-sm text-gray-600">Social media engagement and visibility campaigns</p>
-              </CardContent>
-            </Card>
-          </div>
+          {loading ? (
+            <div className="text-center">
+              <p className="text-gray-600">Loading...</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {pathToHealing.map((item) => (
+                <PathToHealingCard key={item.id} item={item} onClick={handleCardClick} />
+              ))}
+            </div>
+          )}
         </div>
+        <PathToHealingModal item={selectedItem} isOpen={selectedItem !== null} onClose={handleCloseModal} />
       </section>
 
       {/* Contact Section */}

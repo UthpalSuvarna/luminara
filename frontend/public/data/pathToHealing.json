@@ -1,0 +1,34 @@
+{
+  "pathToHealing": [
+    {
+      "id": 1,
+      "title": "Cherished Seconds",
+      "description": "Roots & Shoots Plant Sales and Cherished Seconds Rummage Sales",
+      "image": "/pathToHealing/cherishec_seconds.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Listening Lounge",
+      "description": "Pay-what-you-can counseling with sliding scale options",
+      "image": "/pathToHealing/listening_lounge.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Mothers Oasis",
+      "description": "Actively pursuing CSR grants for operational support",
+      "image": "/pathToHealing/mothers_oasis.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Roots & Shoots",
+      "description": "Social media engagement and visibility campaigns",
+      "image": "/pathToHealing/roots_shoots.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Vintage Vibes",
+      "description": "Social media engagement and visibility campaigns",
+      "image": "/pathToHealing/vintage_vibes.jpeg"
+    }
+  ]
+}
