@@ -18,10 +18,10 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center py-10">
                 {/* Left Content */}
                 <div className="text-gray-900 space-y-8">
-                  <div className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2">
+                  {/* <div className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                     <span className="text-sm font-medium text-blue-800"> 5+ Years of Impact</span>
-                  </div>
+                  </div> */}
 
                   {/* Main Heading */}
                   <div className="space-y-4">
@@ -134,8 +134,8 @@ export default function HomePage() {
                   <div className="mb-6">
                     <span className="text-blue-600 font-semibold text-lg">About Luminara</span>
                     <h2 className="text-4xl md:text-4xl font-bold text-blue-600 mt-2 mb-6">
-                      Mental Health
-                      <span className="text-blue-600"> Wellness Hub. </span>
+                      Mental Health &
+                      <span className="text-blue-600"> Wellness Hub </span>
                     </h2>
                   </div>
 

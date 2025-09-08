@@ -39,7 +39,7 @@ export function PathToHealingModal({ item, isOpen, onClose }: PathToHealingModal
             <Image
               src={item.image || "/placeholder.svg"}
               alt={item.title}
-              width={600}
+              width={300}
               height={300}
               className="object-contain w-full h-64 rounded-lg"
             />

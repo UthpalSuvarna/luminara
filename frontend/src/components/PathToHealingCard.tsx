@@ -24,9 +24,9 @@ export function PathToHealingCard({ item, onClick }: PathToHealingCardProps) {
         <Image
           src={item.image || "/placeholder.svg"}
           alt={item.title}
-          width={500}
+          width={300}
           height={300}
-          className="object-contain w-full h-64 group-hover:scale-105 transition-transform duration-300"
+          className="object-contain w-full h-64 transition-transform duration-300"
         />
       </div>
       <div className="p-6 text-center">

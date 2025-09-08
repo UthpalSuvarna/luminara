@@ -58,7 +58,7 @@ export default function Page() {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Meet Our Team</h1>
               <p className="text-xl text-gray-700">
-                The passionate individuals who drive our mission forward.
+                The passionate individuals who drive our mission forward
               </p>
             </div>
           </div>

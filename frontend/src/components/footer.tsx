@@ -86,7 +86,7 @@ export function Footer() {
           <div className="flex flex-col  justify-between items-center">
             <div className="mb-2 md:mb-0">
               <p className="text-gray-300 text-base font-sans text-center md:text-left">
-                Luminara - Suicide Lifeline Initiative
+                {/* Luminara - Suicide Lifeline Initiative */}
               </p>
             </div>
           </div>

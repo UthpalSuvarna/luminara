@@ -125,10 +125,10 @@ export default function AboutUs() {
                   <h3 className="text-2xl font-bold text-gray-900 ">Objectives</h3>
                 </div>
                 <ul className="text-lg text-gray-700 space-y-3 ">
-                  <li>• Build resilience and hope in the face of life's challenges</li>
-                  <li>• Offer compassionate, non-judgmental care to every individual</li>
-                  <li>• Provide equitable access to support, regardless of background</li>
-                  <li>• Empower individuals with tools for mental and emotional well-being</li>
+                  <li>• Build resilience and hope in the face of life's challenges.</li>
+                  <li>• Offer compassionate, non-judgmental care to every individual.</li>
+                  <li>• Provide equitable access to support, regardless of background.</li>
+                  <li>• Empower individuals with tools for mental and emotional well-being.</li>
                 </ul>
               </CardContent>
             </Card>
@@ -158,7 +158,7 @@ export default function AboutUs() {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-lg text-gray-700 font-sans">Pocket friendly counseling </span>
+                  <span className="text-lg text-gray-700 font-sans">Pocket-friendly counseling </span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
@@ -201,7 +201,7 @@ export default function AboutUs() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6 ">Why Luminara?</h3>
               <p className="text-xl leading-relaxed">
                 The name Luminara evokes light, hope, and guidance, symbolizing our commitment to illuminating paths to
-                well-being for everyone in our community. "Your Healing Space" emphasizes the safe, supportive, and
+                well-being for everyone in our community. "Your Healing Space" emphasizes a safe, supportive, and
                 personal environment we strive to create for every individual who walks through our doors or connects
                 with our services.
               </p>
@@ -212,9 +212,9 @@ export default function AboutUs() {
 
       {/* Suicide Helpline Info */}
       <section className="py-16 bg-red-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">24/7 Suicide Helpline</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">24/7 Suicide Lifeline</h2>
             <div className="flex items-center justify-center mb-8">
               <Phone className="h-10 w-10 text-red-600 mr-4" />
               <span className="text-5xl font-bold text-red-600 font-mono">0824-2983444</span>
@@ -222,7 +222,7 @@ export default function AboutUs() {
             <p className="text-2xl text-gray-700 mb-8 font-sans">You are not alone. We are here to help.</p>
           </div>
 
-          <div className="bg-white p-10 rounded-none shadow-sm">
+          <div className="bg-white p-10 rounded-none shadow-sm w-full">
             <p className="text-lg text-gray-700 mb-6 font-sans leading-relaxed">
               Suicide Lifeline was officially launched on October 2nd, 2017 under the aegis of Susheg Charitable Trust
               with support from educational institutions like St. Agnes College, Roshni Nilaya, St. Aloysius College and
@@ -233,8 +233,7 @@ export default function AboutUs() {
                 <h4 className="font-bold text-gray-900 mb-4 text-xl font-sans">Our Team</h4>
                 <ul className="text-lg text-gray-700 space-y-2 font-sans">
                   <li>• 36 trained first responders available 24/7</li>
-                  <li>• 12 back-up clinicians and experts</li>
-                  <li>• Psychiatrists, Psychologists, Counselors</li>
+                  <li>• 12 back-up clinicians and experts,  Psychiatrists, Psychologists, Counselors</li>
                   <li>• Social workers and lawyers</li>
                 </ul>
               </div>
@@ -242,7 +241,7 @@ export default function AboutUs() {
                 <h4 className="font-bold text-gray-900 mb-4 text-xl font-sans">Our Impact</h4>
                 <ul className="text-lg text-gray-700 space-y-2 font-sans">
                   <li>• 3,132+ callers assisted to date</li>
-                  <li>• Regular awareness programs</li>
+                  <li>• Awareness programs on Mental Health & Wellness</li>
                   <li>• Gatekeeper training in institutions</li>
                   <li>• Annual suicide prevention activities</li>
                 </ul>
