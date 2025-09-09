@@ -140,11 +140,16 @@ export default function HomePage() {
                   </div>
 
                   <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                    At Luminara, we are committed to breaking the silence around mental health and creating a compassionate, stigma-free space where individuals can access support, rediscover hope, and strengthen their emotional resilience. Through professional care, inclusive outreach, and community education, we empower every person to take meaningful steps toward healing and lasting wellness
+                    As the name suggests,it is a reflection of a place dedicated to offering hope and a way forward for those in need.
+                    We are dedicated to changing the narratives on suicide, breaking the silence and reaching out to those in distress through our 24x7 Lifeline.
+
+                    Our ‘ Listening Lounge’ offers a compassionate, safe, non- judgmental healing space for those in search of mental wellness
+                    Through the ‘Vintage Vibes’ initiative,we have created a comfort zone for the elderly to stimulate their minds,share their stories ,grow wiser and happier together
+                    Parenthood is a beautiful,transformative journey and ‘Mother’s Oasis ‘provides the support and a sense of community as they prepare to welcome the new baby
                   </p>
 
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                    Luminara offers free counseling, group support sessions, mindfulness workshops, and self-care resources. Our trained mental health professionals are here to listen, guide, and walk beside you—without judgment.
+                    Luminara offers counseling, group support sessions, mindfulness workshops, and self-care resources. Our trained mental health professionals are here to listen, guide, and walk beside you—without judgment.
                   </p>
 
                   {/* Key Services */}

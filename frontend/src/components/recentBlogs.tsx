@@ -13,7 +13,7 @@ export async function RecentBlogs() {
             {blogs && blogs.map((blog: any) => (
                 <Card key={blog.slug} className="rounded-none pt-0 overflow-hidden hover:shadow-lg transition-shadow">
                     <Image
-                        src={'/img1.jpg'}
+                        src={`/thumbnails/${blog.slug}.png`}
                         alt={blog.title}
                         className="w-full h-full object-cover"
                         width={500}

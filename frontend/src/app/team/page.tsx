@@ -45,8 +45,8 @@ export default function Page() {
     setSelectedMember(null)
   }
 
-  const leads = teamMembers.filter((member) => member.type === "lead")
-  const volunteers = teamMembers.filter((member) => member.type === "volunteer")
+  const operationalLeads = teamMembers.filter((member) => member.role === "Operational Lead");
+  const otherMembers = teamMembers.filter((member) => member.role !== "Operational Lead");
 
   return (
     <div className="min-h-screen bg-white">
@@ -66,29 +66,23 @@ export default function Page() {
 
         <section className="py-16">
           <div className="container mx-auto max-w-7xl px-4">
-            {/* <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our experienced leaders guide the organization's vision and strategic direction.
-              </p>
-            </div> */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {leads.map((member) => (
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Operational Leads</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-center">
+              {operationalLeads.map((member) => (
                 <TeamMemberCard key={member.name} member={member} onClick={handleMemberClick} />
               ))}
             </div>
 
-            {/* <div className="text-center mt-20 mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Volunteers</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Dedicated community members who generously donate their time and skills to our cause.
-              </p>
+            <div className="text-center mt-20 mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Guidance Council</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {volunteers.map((member) => (
+              {otherMembers.map((member) => (
                 <TeamMemberCard key={member.name} member={member} onClick={handleMemberClick} />
               ))}
-            </div> */}
+            </div>
           </div>
         </section>
       </main>

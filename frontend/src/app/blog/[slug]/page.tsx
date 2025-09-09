@@ -48,8 +48,8 @@ export default async function BlogPage({
                 <article className="bg-white rounded-none shadow-sm overflow-hidden">
                     <div className="relative w-full aspect-[16/9]">
                         <Image
-                            src={'/img1.jpg'}
-                            alt="Blog post hero image"
+                            src={`/thumbnails/${blog.slug}.png`}
+                            alt={`Hero image for ${blog.title}`}
                             fill
                             className="object-cover"
                         />

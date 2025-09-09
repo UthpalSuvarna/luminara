@@ -3,17 +3,17 @@
         {
             "name": "Dr. Caroline D'Souza",
             "role": "Psychiatrist",
-            "imageUrl": ""
+            "imageUrl": "/team/caroline-dsouza.jpg"
         },
         {
             "name": "Dr. Rameela Shekhar",
             "role": "Mental Health Professional",
-            "imageUrl": ""
+            "imageUrl": "/team/rameela-shekhar.jpg"
         },
         {
             "name": "Dr. Srinivas Bhat Undaru",
             "role": "Psychiatrist",
-            "imageUrl": ""
+            "imageUrl": "/team/srinivas-bhat-undaru.jpg"
         },
         {
             "name": "Mrs. Merlyn Martis",
@@ -23,7 +23,7 @@
         {
             "name": "Dr. Rosa Mathew Rampuram",
             "role": "Counsellor/Educator",
-            "imageUrl": ""
+            "imageUrl": "/team/rosa-mathew-rampuram.jpg"
         },
         {
             "name": "Dr. Shashwath Satyanath",
@@ -39,6 +39,11 @@
             "name": "Dr. Lavina Noronha",
             "role": "Counsellor",
             "imageUrl": "/team/lavina-noronha.jpg"
+        },
+        {
+            "name": "Usha Rao",
+            "role": "Psychologist & Counselor",
+            "imageUrl": "/team/usha-rao.jpg"
         }
     ]
 }
