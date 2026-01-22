@@ -211,7 +211,7 @@ export default function AboutUs() {
       </section>
 
       {/* Suicide Helpline Info */}
-      <section className="py-16 bg-red-50">
+      {/* <section className="py-16 bg-red-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">24/7 Suicide Lifeline</h2>
@@ -249,7 +249,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* A Sustainable Path to Healing */}
       <section className="py-16 bg-green-50">
@@ -278,7 +278,7 @@ export default function AboutUs() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-900 text-white">
+      {/* <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-10 ">Need Help? We're Here for You</h2>
           <p className="text-2xl mb-10 font-sans">
@@ -307,7 +307,7 @@ export default function AboutUs() {
 
           <p className="mt-8 text-gray-300 italic">You are not alone. We are here to listen.</p>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <Footer />

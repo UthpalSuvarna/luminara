@@ -10,6 +10,10 @@ interface LifelineTeamMember {
 }
 
 export default function LifelinePage() {
+
+  return (
+    <p>Not found</p>
+  );
   const lifelineTeam: LifelineTeamMember[] = teamData.lifelineTeam;
 
   return (

@@ -16,7 +16,7 @@ export function Header() {
     { name: "Contact", href: "/contact" },
     { name: "Blog", href: "/blog" },
     { name: "Our Team", href: "/team" },
-    { name: "Gallery", href: "/gallery"},
+    { name: "Gallery", href: "/gallery" },
   ]
 
   return (
@@ -39,9 +39,9 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="bg-blue-600 font-extrabold hover:bg-blue-700 rounded-none">
+            {/* <Button asChild className="bg-blue-600 font-extrabold hover:bg-blue-700 rounded-none">
               <Link href="/helpline" className="font-extrabold">Suicide Lifeline</Link>
-            </Button>
+            </Button> */}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -64,11 +64,11 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="bg-blue-600 hover:bg-blue-700 mt-2 font-extrabold rounded-none">
+              {/* <Button asChild className="bg-blue-600 hover:bg-blue-700 mt-2 font-extrabold rounded-none">
                 <Link href="/helpline" onClick={() => setIsMenuOpen(false)}>
                   Suicide Lifeline
                 </Link>
-              </Button>
+              </Button> */}
             </nav>
           </div>
         )}

@@ -200,7 +200,7 @@ export default function ContactPage() {
                         Need having thoughts of suicide, please reach out immediately:
                       </p>
                       <div className="space-y-2">
-                        <p className="font-semibold">Call: 0824-2983444</p>
+                        {/* <p className="font-semibold">Call: 0824-2983444</p> */}
                         <p className="font-semibold">Email: luminaramhhub@gmail.com</p>
                         <p className="text-sm text-gray-600">Available 24/7 at your service</p>
                       </div>

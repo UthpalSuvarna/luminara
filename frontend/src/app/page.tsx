@@ -39,12 +39,12 @@ export default function HomePage() {
 
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className=" rounded-none bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4" asChild>
+                    {/* <Button size="lg" className=" rounded-none bg-red-600 hover:bg-red-700 text-white text-lg px-8 py-4" asChild>
                       <Link href="tel:08242983444">
                         <Phone className="mr-2 h-5 w-5" />
                         Call 08242983444
                       </Link>
-                    </Button>
+                    </Button> */}
                     <Button
                       size="lg"
                       variant="outline"
@@ -91,7 +91,7 @@ export default function HomePage() {
                     </div>
 
                     {/* Floating Info Cards */}
-                    <div className="absolute top-4 left-4 bg-white rounded-none p-3 shadow-lg z-30">
+                    {/* <div className="absolute top-4 left-4 bg-white rounded-none p-3 shadow-lg z-30">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
                           <Phone className="h-4 w-4 text-red-600" />
@@ -113,7 +113,7 @@ export default function HomePage() {
                           <div className="text-xs text-gray-600">Callers</div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Background Decoration */}
                     <div className="absolute -top-8 -right-8 w-72 h-72 bg-gradient-to-br from-blue-400 to-purple-500 rounded-none opacity-20 -z-10"></div>
@@ -175,7 +175,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Floating Cards */}
-                  <div className="absolute -top-6 -left-6 bg-white p-4  shadow-lg z-20">
+                  {/* <div className="absolute -top-6 -left-6 bg-white p-4  shadow-lg z-20">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                         <Heart className="h-6 w-6 text-green-600" />
@@ -197,7 +197,7 @@ export default function HomePage() {
                         <div className="text-sm text-gray-600">At Your Service</div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                 </div>
               </div>
