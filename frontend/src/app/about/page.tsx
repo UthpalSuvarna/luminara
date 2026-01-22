@@ -188,7 +188,7 @@ export default function AboutUs() {
           <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center ">Our Roots</h2>
           <div className="prose prose-xl max-w-none text-gray-700 font-sans">
             <p className="mb-8 text-xl leading-relaxed">
-              Luminara is a Suicide Lifeline Initiative, a non-profit unit committed to suicide prevention and mental
+              Luminara is a non-profit unit committed to suicide prevention and mental
               health advocacy. It was born from years of listening to survivors, families, and those in distress, and
               built with care, empathy, and hope.
             </p>
